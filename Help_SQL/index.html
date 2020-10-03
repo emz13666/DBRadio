@@ -1,0 +1,1110 @@
+  <HTML>
+  <HEAD>
+  
+  <TITLE>Справочное руководство по MySQL версии</TITLE>
+   <style> code {color:purple} tt {color:green} samp {color:navy} pre {color:maroon} </style> <meta http-equiv="Content-Type" content="text/html; charset=koi8-r">
+  </HEAD>
+  <BODY BGCOLOR=white TEXT=#000000 LINK=#101090 VLINK=#7030B0>
+<H1><center>Справочное руководство по MySQL</center></H1>
+<P>
+<P><HR><P>
+<UL>
+<LI><A NAME="Introduction" HREF="manual.ru.html#Introduction">1  Общая информация</A>
+<UL>
+<LI><A NAME="Manual-info" HREF="manual.ru.html#Manual-info">1.1  Об этом руководстве</A>
+<LI><A NAME="Manual_conventions" HREF="manual.ru.html#Manual_conventions">1.2  Соглашения, используемые в данном руководстве</A>
+<LI><A NAME="About_russian" HREF="manual.ru.html#About_russian">1.3  О русском переводе руководства</A>
+<UL>
+<LI><A NAME="Russian-terms" HREF="manual.ru.html#Russian-terms">1.3.1  Список терминов, принятых в русском переводе</A>
+</UL>
+<LI><A NAME="What-is" HREF="manual.ru.html#What-is">1.4  Что представляет собой MySQL?</A>
+<UL>
+<LI><A NAME="History" HREF="manual.ru.html#History">1.4.1  История MySQL</A>
+<LI><A NAME="Features" HREF="manual.ru.html#Features">1.4.2  Основные возможности MySQL</A>
+<LI><A NAME="Stability" HREF="manual.ru.html#Stability">1.4.3  Насколько стабильным является MySQL?</A>
+<LI><A NAME="Table_size" HREF="manual.ru.html#Table_size">1.4.4  Насколько большими могут быть таблицы в MySQL?</A>
+<LI><A NAME="Year_2000_compliance" HREF="manual.ru.html#Year_2000_compliance">1.4.5  Вопросы, связанные с Проблемой-2000</A>
+</UL>
+<LI><A NAME="What_is_MySQL_AB" HREF="manual.ru.html#What_is_MySQL_AB">1.5  Что представляет собой компания MySQL AB?</A>
+<UL>
+<LI><A NAME="MySQL_AB_business_model_and_services" HREF="manual.ru.html#MySQL_AB_business_model_and_services">1.5.1  Бизнес-модель и услуги, оказываемые компанией MySQL AB</A>
+<UL>
+<LI><A NAME="Business_Services_Support" HREF="manual.ru.html#Business_Services_Support">1.5.1.1  Поддержка</A>
+<LI><A NAME="Business_Services_Training" HREF="manual.ru.html#Business_Services_Training">1.5.1.2  Обучение и сертификация</A>
+<LI><A NAME="Business_Services_Consulting" HREF="manual.ru.html#Business_Services_Consulting">1.5.1.3  Консультации</A>
+<LI><A NAME="Business_Services_Commercial_licenses" HREF="manual.ru.html#Business_Services_Commercial_licenses">1.5.1.4  Коммерческие лицензии</A>
+<LI><A NAME="Business_Services_Partnering" HREF="manual.ru.html#Business_Services_Partnering">1.5.1.5  О нашей программе партнерства</A>
+<LI><A NAME="Business_Services_Advertising" HREF="manual.ru.html#Business_Services_Advertising">1.5.1.6  О рекламе</A>
+</UL>
+<LI><A NAME="Contact_information" HREF="manual.ru.html#Contact_information">1.5.2  Как с нами связаться</A>
+</UL>
+<LI><A NAME="Licensing_and_Support" HREF="manual.ru.html#Licensing_and_Support">1.6  Лицензии и поддержка MySQL</A>
+<UL>
+<LI><A NAME="Support" HREF="manual.ru.html#Support">1.6.1  Поддержка, предлагаемая компанией MySQL AB</A>
+<LI><A NAME="Copyright" HREF="manual.ru.html#Copyright">1.6.2  Авторские права и лицензии на MySQL</A>
+<LI><A NAME="MySQL_licenses" HREF="manual.ru.html#MySQL_licenses">1.6.3  Лицензии на ПО MySQL</A>
+<UL>
+<LI><A NAME="Using_the_MySQL_software_under_a_commercial_license" HREF="manual.ru.html#Using_the_MySQL_software_under_a_commercial_license">1.6.3.1  Использование ПО MySQL под коммерческой лицензией</A>
+<LI><A NAME="Using_the_MySQL_software_for_free_under_GPL" HREF="manual.ru.html#Using_the_MySQL_software_for_free_under_GPL">1.6.3.2  Бесплатное использование ПО MySQL по лицензии GPL</A>
+</UL>
+<LI><A NAME="MySQL_AB_Logos_and_Trademarks" HREF="manual.ru.html#MySQL_AB_Logos_and_Trademarks">1.6.4  Логотипы и торговые марки MySQL AB</A>
+<UL>
+<LI><A NAME="The_Original_MySQL_logo" HREF="manual.ru.html#The_Original_MySQL_logo">1.6.4.1  Оригинальный логотип MySQL</A>
+<LI><A NAME="MySQL_Logos_that_may_be_Used_Without_Written_Permission" HREF="manual.ru.html#MySQL_Logos_that_may_be_Used_Without_Written_Permission">1.6.4.2  Логотипы MySQL, которые могут использоваться без письменного разрешения</A>
+<LI><A NAME="When_need_MySQL_logo_permission" HREF="manual.ru.html#When_need_MySQL_logo_permission">1.6.4.3  В каком случае для использования логотипов необходимо письменное разрешение?</A>
+<LI><A NAME="MySQL_AB_Partnership_Logos" HREF="manual.ru.html#MySQL_AB_Partnership_Logos">1.6.4.4  Партнерские логотипы MySQL AB</A>
+<LI><A NAME="Using_MySQL_word_in_presentations" HREF="manual.ru.html#Using_MySQL_word_in_presentations">1.6.4.5  Использование слова <code>MySQL</code> в текстовых документах и презентациях</A>
+<LI><A NAME="Using_MySQL_word_in_company_and_product_names" HREF="manual.ru.html#Using_MySQL_word_in_company_and_product_names">1.6.4.6  Использование слова <code>MySQL</code> в названиях компаний и продуктов</A>
+</UL>
+</UL>
+<LI><A NAME="MySQL_4.0_In_A_Nutshell" HREF="manual.ru.html#MySQL_4.0_In_A_Nutshell">1.7  Кратко о MySQL 4.x</A>
+<UL>
+<LI><A NAME="Nutshell_Stepwise_Rollout" HREF="manual.ru.html#Nutshell_Stepwise_Rollout">1.7.1  Поэтапный выпуск</A>
+<LI><A NAME="Nutshell_Ready_for_Immediate_Use" HREF="manual.ru.html#Nutshell_Ready_for_Immediate_Use">1.7.2  Можно использовать уже прямо сейчас</A>
+<LI><A NAME="Nutshell_Embedded_MySQL" HREF="manual.ru.html#Nutshell_Embedded_MySQL">1.7.3  Встроенный MySQL</A>
+<LI><A NAME="Nutshell_Other_features" HREF="manual.ru.html#Nutshell_Other_features">1.7.4  Другие функции, доступные в MySQL 4.0</A>
+<LI><A NAME="Nutshell_Future_features" HREF="manual.ru.html#Nutshell_Future_features">1.7.5  Функции MySQL 4.x, которые будут добавлены в будущем</A>
+<LI><A NAME="Nutshell_4.1_development_release" HREF="manual.ru.html#Nutshell_4.1_development_release">1.7.6  MySQL 4.1, следующая ветка в разработке</A>
+</UL>
+<LI><A NAME="MySQL_Information_Sources" HREF="manual.ru.html#MySQL_Information_Sources">1.8  Источники информации по MySQL</A>
+<UL>
+<LI><A NAME="Questions" HREF="manual.ru.html#Questions">1.8.1  Списки рассылки MySQL</A>
+<UL>
+<LI><A NAME="Mailing-list" HREF="manual.ru.html#Mailing-list">1.8.1.1  Списки рассылки MySQL</A>
+<LI><A NAME="Asking_questions" HREF="manual.ru.html#Asking_questions">1.8.1.2  Как задавать вопросы и направлять сообщения об ошибках</A>
+<LI><A NAME="Bug_reports" HREF="manual.ru.html#Bug_reports">1.8.1.3  Как отправлять отчеты об ошибках или проблемах</A>
+<LI><A NAME="Answering_questions" HREF="manual.ru.html#Answering_questions">1.8.1.4  Рекомендации по ответам на вопросы, направляемые в список рассылки</A>
+</UL>
+<LI><A NAME="IRC" HREF="manual.ru.html#IRC">1.8.2  Пользователи MySQL на IRC</A>
+</UL>
+<LI><A NAME="Compatibility" HREF="manual.ru.html#Compatibility">1.9  Насколько MySQL соответствует стандартам?</A>
+<UL>
+<LI><A NAME="Standards" HREF="manual.ru.html#Standards">1.9.1  Каким стандартам соответствует MySQL ?</A>
+<LI><A NAME="ANSI_mode" HREF="manual.ru.html#ANSI_mode">1.9.2  Запуск MySQL в режиме ANSI</A>
+<LI><A NAME="Extensions_to_ANSI" HREF="manual.ru.html#Extensions_to_ANSI">1.9.3  Расширения MySQL к ANSI SQL92</A>
+<LI><A NAME="Differences_from_ANSI" HREF="manual.ru.html#Differences_from_ANSI">1.9.4  Отличия MySQL от ANSI SQL92</A>
+<UL>
+<LI><A NAME="ANSI_diff_Sub-selects" HREF="manual.ru.html#ANSI_diff_Sub-selects">1.9.4.1  Вложенные <code>SELECT</code>ы</A>
+<LI><A NAME="ANSI_diff_SELECT_INTO_TABLE" HREF="manual.ru.html#ANSI_diff_SELECT_INTO_TABLE">1.9.4.2  Оператор  <code>SELECT INTO TABLE</code></A>
+<LI><A NAME="ANSI_diff_Transactions" HREF="manual.ru.html#ANSI_diff_Transactions">1.9.4.3  Транзакции и атомарные операции</A>
+<LI><A NAME="ANSI_diff_Triggers" HREF="manual.ru.html#ANSI_diff_Triggers">1.9.4.4  Хранимые процедуры и триггеры</A>
+<LI><A NAME="ANSI_diff_Foreign_Keys" HREF="manual.ru.html#ANSI_diff_Foreign_Keys">1.9.4.5  Внешние ключи</A>
+<LI><A NAME="ANSI_diff_Views" HREF="manual.ru.html#ANSI_diff_Views">1.9.4.6  Представления</A>
+<LI><A NAME="ANSI_diff_comments" HREF="manual.ru.html#ANSI_diff_comments">1.9.4.7  Символы `--' как начало комментария</A>
+</UL>
+<LI><A NAME="Bugs" HREF="manual.ru.html#Bugs">1.9.5  Известные ошибки и недостатки проектирования в MySQL</A>
+<UL>
+<LI><A NAME="Errors_in_3.23" HREF="manual.ru.html#Errors_in_3.23">1.9.5.1  Ошибки, известные в 3.23 и исправленные в более поздних версиях MySQL</A>
+<LI><A NAME="Open_bugs" HREF="manual.ru.html#Open_bugs">1.9.5.2  Открытые ошибки / особенности строения MySQL</A>
+</UL>
+</UL>
+<LI><A NAME="TODO" HREF="manual.ru.html#TODO">1.10  MySQL и будущее (что предстоит сделать)</A>
+<UL>
+<LI><A NAME="TODO_MySQL_4.0" HREF="manual.ru.html#TODO_MySQL_4.0">1.10.1  Что планируется реализовать в версии в 4.0</A>
+<LI><A NAME="TODO_MySQL_4.1" HREF="manual.ru.html#TODO_MySQL_4.1">1.10.2  Что планируется реализовать в версии 4.1</A>
+<LI><A NAME="TODO_MySQL_5.0" HREF="manual.ru.html#TODO_MySQL_5.0">1.10.3  Что планируется реализовать в версии 5.0</A>
+<LI><A NAME="TODO_future" HREF="manual.ru.html#TODO_future">1.10.4  Что должно быть сделано в ближайшем будущем</A>
+<LI><A NAME="TODO_sometime" HREF="manual.ru.html#TODO_sometime">1.10.5  То, что надо сделать когда-нибудь</A>
+<LI><A NAME="TODO_unplanned" HREF="manual.ru.html#TODO_unplanned">1.10.6  То, чего не планируется делать</A>
+</UL>
+<LI><A NAME="Comparisons" HREF="manual.ru.html#Comparisons">1.11  Сравнение MySQL с другими СУБД</A>
+<UL>
+<LI><A NAME="Compare_mSQL" HREF="manual.ru.html#Compare_mSQL">1.11.1  Сравнение MySQL и mSQL</A>
+<UL>
+<LI><A NAME="Using_mSQL_tools" HREF="manual.ru.html#Using_mSQL_tools">1.11.1.1  Как конвертировать инструментальные средства mSQL в MySQL</A>
+<LI><A NAME="Protocol_differences" HREF="manual.ru.html#Protocol_differences">1.11.1.2  Различия в клиент-серверных коммуникационных протоколах mSQL и MySQL</A>
+<LI><A NAME="Syntax_differences" HREF="manual.ru.html#Syntax_differences">1.11.1.3  Различия в синтаксисе SQL между mSQL 2.0 и MySQL</A>
+</UL>
+<LI><A NAME="Compare_PostgreSQL" HREF="manual.ru.html#Compare_PostgreSQL">1.11.2  Сравнение MySQL c PostgreSQL</A>
+<UL>
+<LI><A NAME="MySQL-PostgreSQL_goals" HREF="manual.ru.html#MySQL-PostgreSQL_goals">1.11.2.1  Стратегии развития MySQL и PostgreSQL</A>
+<LI><A NAME="MySQL-PostgreSQL_features" HREF="manual.ru.html#MySQL-PostgreSQL_features">1.11.2.2  Сравнение возможностей MySQL и PostgreSQL</A>
+<LI><A NAME="MySQL-PostgreSQL_benchmarks" HREF="manual.ru.html#MySQL-PostgreSQL_benchmarks">1.11.2.3  Тестирование скорости работы MySQL и PostgreSQL</A>
+</UL>
+</UL>
+</UL>
+<LI><A NAME="Installing" HREF="manual.ru.html#Installing">2  Установка MySQL</A>
+<UL>
+<LI><A NAME="Quick_Standard_Installation" HREF="manual.ru.html#Quick_Standard_Installation">2.1  Быстрая стандартная установка MySQL</A>
+<UL>
+<LI><A NAME="Linux-RPM" HREF="manual.ru.html#Linux-RPM">2.1.1  Установка MySQL на Linux</A>
+<LI><A NAME="Windows_installation" HREF="manual.ru.html#Windows_installation">2.1.2  Установка MySQL на Windows</A>
+<UL>
+<LI><A NAME="Windows_binary_installation" HREF="manual.ru.html#Windows_binary_installation">2.1.2.1  Установка бинарного кода</A>
+<LI><A NAME="Windows_prepare_environment" HREF="manual.ru.html#Windows_prepare_environment">2.1.2.2  Подготовка конфигурации MySQL для Windows</A>
+<LI><A NAME="Windows_server_first_start" HREF="manual.ru.html#Windows_server_first_start">2.1.2.3  Первый запуск сервера</A>
+</UL>
+<LI><A NAME="Mac_OS_X_installation" HREF="manual.ru.html#Mac_OS_X_installation">2.1.3  Установка MySQL на MacOS X</A>
+</UL>
+<LI><A NAME="General_Installation_Issues" HREF="manual.ru.html#General_Installation_Issues">2.2  Общие вопросы инсталляции</A>
+<UL>
+<LI><A NAME="Getting_MySQL" HREF="manual.ru.html#Getting_MySQL">2.2.1  Как получить MySQL</A>
+<LI><A NAME="Verifying_Package_Integrity" HREF="manual.ru.html#Verifying_Package_Integrity">2.2.2  Проверка целостности пакетов с помощью <code>MD5 Checksums</code> или <code>GnuPG</code></A>
+<LI><A NAME="Which_OS" HREF="manual.ru.html#Which_OS">2.2.5  Операционные системы, поддерживаемые MySQL</A>
+<LI><A NAME="Which_version" HREF="manual.ru.html#Which_version">2.2.6  Какую версию MySQL использовать</A>
+<LI><A NAME="Installation_layouts" HREF="manual.ru.html#Installation_layouts">2.2.7  Схемы установки</A>
+<LI><A NAME="Many_versions" HREF="manual.ru.html#Many_versions">2.2.8  Как и когда выпускаются обновления</A>
+<LI><A NAME="MySQL_binaries" HREF="manual.ru.html#MySQL_binaries">2.2.9  Бинарные коды MySQL, скомпилированные в MySQL AB</A>
+<LI><A NAME="Installing_binary" HREF="manual.ru.html#Installing_binary">2.2.10  Установка бинарного дистрибутива MySQL</A>
+</UL>
+<LI><A NAME="Installing_source" HREF="manual.ru.html#Installing_source">2.3  Установка исходного дистрибутива MySQL</A>
+<UL>
+<LI><A NAME="Quick_install" HREF="manual.ru.html#Quick_install">2.3.1  Обзор  быстрой  установки</A>
+<LI><A NAME="Applying_patches" HREF="manual.ru.html#Applying_patches">2.3.2  Применение патчей</A>
+<LI><A NAME="configure_options" HREF="manual.ru.html#configure_options">2.3.3  Типичные опции <code>configure</code></A>
+<LI><A NAME="Installing_source_tree" HREF="manual.ru.html#Installing_source_tree">2.3.4  Установка из экспериментального набора исходных кодов</A>
+<LI><A NAME="Compilation_problems" HREF="manual.ru.html#Compilation_problems">2.3.5  Проблемы с компиляцией?</A>
+<LI><A NAME="MIT-pthreads" HREF="manual.ru.html#MIT-pthreads">2.3.6  Замечания по потокам MIT-pthreads</A>
+<LI><A NAME="Windows_source_build" HREF="manual.ru.html#Windows_source_build">2.3.7  Дистрибутив исходного кода для Windows</A>
+</UL>
+<LI><A NAME="Post-installation" HREF="manual.ru.html#Post-installation">2.4  Послеустановочные настройка и тестирование</A>
+<UL>
+<LI><A NAME="mysql_install_db" HREF="manual.ru.html#mysql_install_db">2.4.1  Проблемы при запуске <code>mysql_install_db</code></A>
+<LI><A NAME="Starting_server" HREF="manual.ru.html#Starting_server">2.4.2  Проблемы при запуске сервера MySQL</A>
+<LI><A NAME="Automatic_start" HREF="manual.ru.html#Automatic_start">2.4.3  Автоматический запуск и остановка MySQL</A>
+</UL>
+<LI><A NAME="Upgrade" HREF="manual.ru.html#Upgrade">2.5  Апгрейд/даунгрейд MySQL</A>
+<UL>
+<LI><A NAME="Upgrading-from-4.0" HREF="manual.ru.html#Upgrading-from-4.0">2.5.1  Модернизация с версии 4.0</A>
+<LI><A NAME="Upgrading-from-3.23" HREF="manual.ru.html#Upgrading-from-3.23">2.5.2  Модернизация с версии 3.23 до версии 4.0</A>
+<LI><A NAME="Upgrading-from-3.22" HREF="manual.ru.html#Upgrading-from-3.22">2.5.3  Модернизация с версии 3.22 до версии 3.23</A>
+<LI><A NAME="Upgrading-from-3.21" HREF="manual.ru.html#Upgrading-from-3.21">2.5.4  Модернизация с версии 3.21 до версии 3.22</A>
+<LI><A NAME="Upgrading-from-3.20" HREF="manual.ru.html#Upgrading-from-3.20">2.5.5  Модернизация с версии 3.20 до версии 3.21</A>
+<LI><A NAME="Upgrading-to-arch" HREF="manual.ru.html#Upgrading-to-arch">2.5.6  Модернизация к иной архитектуре</A>
+</UL>
+<LI><A NAME="Operating_System_Specific_Notes" HREF="manual.ru.html#Operating_System_Specific_Notes">2.6  Заметки по операционным системам</A>
+<UL>
+<LI><A NAME="Linux" HREF="manual.ru.html#Linux">2.6.1  Примечания к Linux (Все версии Linux)</A>
+<UL>
+<LI><A NAME="Binary_notes-Linux" HREF="manual.ru.html#Binary_notes-Linux">2.6.1.1  Примечания к бинарным дистрибутивам Linux</A>
+<LI><A NAME="Linux-x86" HREF="manual.ru.html#Linux-x86">2.6.1.2  Заметки по поводу Linux x86</A>
+<LI><A NAME="Linux-SPARC" HREF="manual.ru.html#Linux-SPARC">2.6.1.3  Примечания к Linux SPARC</A>
+<LI><A NAME="Linux-Alpha" HREF="manual.ru.html#Linux-Alpha">2.6.1.4  Примечания к Linux Alpha</A>
+<LI><A NAME="Linux-PowerPC" HREF="manual.ru.html#Linux-PowerPC">2.6.1.5  Примечания к Linux PowerPC</A>
+<LI><A NAME="Linux-MIPS" HREF="manual.ru.html#Linux-MIPS">2.6.1.6  Примечания к Linux MIPS</A>
+<LI><A NAME="Linux-IA64" HREF="manual.ru.html#Linux-IA64">2.6.1.7  Примечания к Linux IA64</A>
+</UL>
+<LI><A NAME="Windows" HREF="manual.ru.html#Windows">2.6.2  Примечания к Windows</A>
+<UL>
+<LI><A NAME="Win95_start" HREF="manual.ru.html#Win95_start">2.6.2.1  Запуск MySQL на Windows 95, 98 или Me</A>
+<LI><A NAME="NT_start" HREF="manual.ru.html#NT_start">2.6.2.2  Запуск MySQL на Windows NT, 2000 или XP</A>
+<LI><A NAME="Windows_running" HREF="manual.ru.html#Windows_running">2.6.2.3  Работа MySQL в среде Windows</A>
+<LI><A NAME="Windows_and_SSH" HREF="manual.ru.html#Windows_and_SSH">2.6.2.4  Соединение с MySQL на удаленной машине под Windows с использованием SSH</A>
+<LI><A NAME="Windows_symbolic_links" HREF="manual.ru.html#Windows_symbolic_links">2.6.2.5  Распределение данных в Windows между несколькими различными дисками</A>
+<LI><A NAME="Windows_client_compiling" HREF="manual.ru.html#Windows_client_compiling">2.6.2.6  Компиляция MySQL-клиентов в среде Windows</A>
+<LI><A NAME="Windows_vs_Unix" HREF="manual.ru.html#Windows_vs_Unix">2.6.2.7  Сравнительные характеристики MySQL под Windows и под Unix</A>
+</UL>
+<LI><A NAME="Solaris" HREF="manual.ru.html#Solaris">2.6.3  Примечания к Solaris</A>
+<UL>
+<LI><A NAME="Solaris_2.7" HREF="manual.ru.html#Solaris_2.7">2.6.3.1  Примечания к Solaris 2.7/2.8</A>
+<LI><A NAME="Solaris_x86" HREF="manual.ru.html#Solaris_x86">2.6.3.2  Примечания к Solaris x86</A>
+</UL>
+<LI><A NAME="BSD_Notes" HREF="manual.ru.html#BSD_Notes">2.6.4  Примечания к BSD</A>
+<UL>
+<LI><A NAME="FreeBSD" HREF="manual.ru.html#FreeBSD">2.6.4.1  Примечания к FreeBSD</A>
+<LI><A NAME="NetBSD" HREF="manual.ru.html#NetBSD">2.6.4.2  Примечания к NetBSD</A>
+<LI><A NAME="OpenBSD" HREF="manual.ru.html#OpenBSD">2.6.4.3  Примечания к OpenBSD 2.5</A>
+<LI><A NAME="OpenBSD_2.8" HREF="manual.ru.html#OpenBSD_2.8">2.6.4.4  Примечания к OpenBSD 2.8</A>
+<LI><A NAME="BSDI" HREF="manual.ru.html#BSDI">2.6.4.5  Примечания к BSD/OS версий 2.x</A>
+<LI><A NAME="BSDI3" HREF="manual.ru.html#BSDI3">2.6.4.6  Примечания к BSD/OS версий 3.x</A>
+<LI><A NAME="BSDI4" HREF="manual.ru.html#BSDI4">2.6.4.7  Примечания к BSD/OS версий 4.x</A>
+</UL>
+<LI><A NAME="Mac_OS_X" HREF="manual.ru.html#Mac_OS_X">2.6.5  Примечания к Mac OS X</A>
+<UL>
+<LI><A NAME="Mac_OS_X_10.x" HREF="manual.ru.html#Mac_OS_X_10.x">2.6.5.1  Mac OS X 10.x</A>
+<LI><A NAME="Mac_OS_X_Server" HREF="manual.ru.html#Mac_OS_X_Server">2.6.5.2  Mac OS X Server 1.2 (Rhapsody)</A>
+</UL>
+<LI><A NAME="Other_Unix_Notes" HREF="manual.ru.html#Other_Unix_Notes">2.6.6  Примечания к другим Unix-системам</A>
+<UL>
+<LI><A NAME="Binary_notes-HP-UX" HREF="manual.ru.html#Binary_notes-HP-UX">2.6.6.1  Примечания к бинарному дистрибутиву HP-UX</A>
+<LI><A NAME="HP-UX_10.20" HREF="manual.ru.html#HP-UX_10.20">2.6.6.2  Примечания к HP-UX версии 10.20</A>
+<LI><A NAME="HP-UX_11.x" HREF="manual.ru.html#HP-UX_11.x">2.6.6.3  Примечания к HP-UX версий 11.x</A>
+<LI><A NAME="IBM-AIX" HREF="manual.ru.html#IBM-AIX">2.6.6.4  Примечания к IBM-AIX</A>
+<LI><A NAME="SunOS" HREF="manual.ru.html#SunOS">2.6.6.5  Примечания к SunOS 4</A>
+<LI><A NAME="Alpha-DEC-UNIX" HREF="manual.ru.html#Alpha-DEC-UNIX">2.6.6.6  Примечания к Alpha-DEC-UNIX (Tru64)</A>
+<LI><A NAME="Alpha-DEC-OSF1" HREF="manual.ru.html#Alpha-DEC-OSF1">2.6.6.7  Примечания к Alpha-DEC-OSF/1</A>
+<LI><A NAME="SGI-Irix" HREF="manual.ru.html#SGI-Irix">2.6.6.8  Примечания к SGI Irix</A>
+<LI><A NAME="Caldera" HREF="manual.ru.html#Caldera">2.6.6.9  Примечания к Caldera (SCO)</A>
+<LI><A NAME="Caldera_Unixware" HREF="manual.ru.html#Caldera_Unixware">2.6.6.10  Примечания к Caldera (SCO) Unixware Version 7.0</A>
+</UL>
+<LI><A NAME="OS_2" HREF="manual.ru.html#OS_2">2.6.7  Примечания к OS/2</A>
+<LI><A NAME="BeOS" HREF="manual.ru.html#BeOS">2.6.8  Примечания к BeOS</A>
+<LI><A NAME="Novell_Netware" HREF="manual.ru.html#Novell_Netware">2.6.9  Примечания к Novell NetWare</A>
+</UL>
+<LI><A NAME="Perl_support" HREF="manual.ru.html#Perl_support">2.7  Замечания по установке Perl</A>
+<UL>
+<LI><A NAME="Perl_installation" HREF="manual.ru.html#Perl_installation">2.7.1  Установка Perl на Unix</A>
+<LI><A NAME="ActiveState_Perl" HREF="manual.ru.html#ActiveState_Perl">2.7.2  Установка ActiveState Perl на Windows</A>
+<LI><A NAME="Windows_Perl" HREF="manual.ru.html#Windows_Perl">2.7.3  Установка дистрибутива Perl для MySQL на Windows</A>
+<LI><A NAME="Perl_support_problems" HREF="manual.ru.html#Perl_support_problems">2.7.4  Проблемы использования интерфейса Perl <code>DBI</code>/<code>DBD</code></A>
+</UL>
+</UL>
+<LI><A NAME="Tutorial" HREF="manual.ru.html#Tutorial">3  Учебное пособие по MySQL</A>
+<UL>
+<LI><A NAME="Connecting-disconnecting" HREF="manual.ru.html#Connecting-disconnecting">3.1  Подсоединение к серверу и отсоединение от него</A>
+<LI><A NAME="Entering_queries" HREF="manual.ru.html#Entering_queries">3.2  Ввод запросов</A>
+<LI><A NAME="Database_use" HREF="manual.ru.html#Database_use">3.3  Создание и использование базы данных</A>
+<UL>
+<LI><A NAME="Creating_database" HREF="manual.ru.html#Creating_database">3.3.1  Создание и выбор базы данных</A>
+<LI><A NAME="Creating_tables" HREF="manual.ru.html#Creating_tables">3.3.2  Создание таблицы</A>
+<LI><A NAME="Loading_tables" HREF="manual.ru.html#Loading_tables">3.3.3  Загрузка данных в таблицу</A>
+<LI><A NAME="Retrieving_data" HREF="manual.ru.html#Retrieving_data">3.3.4  Выборка информации из таблицы</A>
+<UL>
+<LI><A NAME="Selecting_all" HREF="manual.ru.html#Selecting_all">3.3.4.1  Выборка всех данных</A>
+<LI><A NAME="Selecting_rows" HREF="manual.ru.html#Selecting_rows">3.3.4.2  Выборка определенных строк</A>
+<LI><A NAME="Selecting_columns" HREF="manual.ru.html#Selecting_columns">3.3.4.3  Выборка определенных столбцов</A>
+<LI><A NAME="Sorting_rows" HREF="manual.ru.html#Sorting_rows">3.3.4.4  Сортировка строк</A>
+<LI><A NAME="Date_calculations" HREF="manual.ru.html#Date_calculations">3.3.4.5  Вычисление  дат</A>
+<LI><A NAME="Working_with_NULL" HREF="manual.ru.html#Working_with_NULL">3.3.4.6  Работа с значениями NULL</A>
+<LI><A NAME="Pattern_matching" HREF="manual.ru.html#Pattern_matching">3.3.4.7  Сравнение по шаблонам</A>
+<LI><A NAME="Counting_rows" HREF="manual.ru.html#Counting_rows">3.3.4.8  Подсчет строк</A>
+<LI><A NAME="Multiple_tables" HREF="manual.ru.html#Multiple_tables">3.3.4.9  Использование нескольких таблиц</A>
+</UL>
+</UL>
+<LI><A NAME="Getting_information" HREF="manual.ru.html#Getting_information">3.4  Получение информации о базах данных и таблицах</A>
+<LI><A NAME="Examples" HREF="manual.ru.html#Examples">3.5  Примеры стандартных запросов</A>
+<UL>
+<LI><A NAME="example-Maximum-column" HREF="manual.ru.html#example-Maximum-column">3.5.1  Максимальное значение столбца</A>
+<LI><A NAME="example-Maximum-row" HREF="manual.ru.html#example-Maximum-row">3.5.2  Строка, содержащая максимальное значение некоторого столбца</A>
+<LI><A NAME="example-Maximum-column-group" HREF="manual.ru.html#example-Maximum-column-group">3.5.3  Максимальное значение столбца для группы</A>
+<LI><A NAME="example-Maximum-column-group-row" HREF="manual.ru.html#example-Maximum-column-group-row">3.5.4  Строка, содержащая максимальное значение некоторого столбца</A>
+<LI><A NAME="example-user-variables" HREF="manual.ru.html#example-user-variables">3.5.5  Использование пользовательских переменных</A>
+<LI><A NAME="example-Foreign_keys" HREF="manual.ru.html#example-Foreign_keys">3.5.6  Использование внешних ключей</A>
+<LI><A NAME="Searching_on_two_keys" HREF="manual.ru.html#Searching_on_two_keys">3.5.7  Поиск по двум ключам</A>
+<LI><A NAME="Calculating_days" HREF="manual.ru.html#Calculating_days">3.5.8  Подсчет посещений за день</A>
+<LI><A NAME="example-AUTO_INCREMENT" HREF="manual.ru.html#example-AUTO_INCREMENT">3.5.9  Использование атрибута AUTO_INCREMENT</A>
+</UL>
+<LI><A NAME="Batch_mode" HREF="manual.ru.html#Batch_mode">3.6  Использование <code>mysql</code> в пакетном режиме</A>
+<LI><A NAME="Twin" HREF="manual.ru.html#Twin">3.7  Запросы проекта "Близнецы" (Twin Project)</A>
+<UL>
+<LI><A NAME="Twin_pool" HREF="manual.ru.html#Twin_pool">3.7.1  Поиск нераспределенных близнецов</A>
+<LI><A NAME="Twin_event" HREF="manual.ru.html#Twin_event">3.7.2  Вывод таблицы состояний пар близнецов</A>
+</UL>
+<LI><A NAME="Apache" HREF="manual.ru.html#Apache">3.8  Использование MySQL совместно с Apache</A>
+</UL>
+<LI><A NAME="MySQL_Database_Administration" HREF="manual.ru.html#MySQL_Database_Administration">4  Администрирование баз данных</A>
+<UL>
+<LI><A NAME="Configuring_MySQL" HREF="manual.ru.html#Configuring_MySQL">4.1  Конфигурирование MySQL</A>
+<UL>
+<LI><A NAME="Command-line_options" HREF="manual.ru.html#Command-line_options">4.1.1  Параметры командной строки <code>mysqld</code></A>
+<LI><A NAME="Option_files" HREF="manual.ru.html#Option_files">4.1.2  Файлы параметров <tt>`my.cnf'</tt></A>
+<LI><A NAME="Installing_many_servers" HREF="manual.ru.html#Installing_many_servers">4.1.3  Установка нескольких серверов на один компьютер</A>
+<LI><A NAME="Multiple_servers" HREF="manual.ru.html#Multiple_servers">4.1.4  Запуск нескольких серверов MySQL на одном компьютере</A>
+</UL>
+<LI><A NAME="Privilege_system" HREF="manual.ru.html#Privilege_system">4.2  Общие проблемы безопасности и система привилегий доступа MySQL</A>
+<UL>
+<LI><A NAME="General_security" HREF="manual.ru.html#General_security">4.2.1  Общие принципы обеспечения безопасности</A>
+<LI><A NAME="Security" HREF="manual.ru.html#Security">4.2.2  Как обезопасить MySQL от хакеров</A>
+<LI><A NAME="Privileges_options" HREF="manual.ru.html#Privileges_options">4.2.3  Опции запуска <code>mysqld</code>, относящиеся к безопасности</A>
+<LI><A NAME="LOAD_DATA_LOCAL" HREF="manual.ru.html#LOAD_DATA_LOCAL">4.2.4  Вопросы безопасности, относящиеся к команде LOAD DATA LOCAL</A>
+<LI><A NAME="What_Privileges" HREF="manual.ru.html#What_Privileges">4.2.5  Функции, выполняемые системой привилегий</A>
+<LI><A NAME="Privileges" HREF="manual.ru.html#Privileges">4.2.6  Как работает система привилегий</A>
+<LI><A NAME="Privileges_provided" HREF="manual.ru.html#Privileges_provided">4.2.7  Привилегии, предоставляемые MySQL</A>
+<LI><A NAME="Connecting" HREF="manual.ru.html#Connecting">4.2.8  Соединение с сервером MySQL</A>
+<LI><A NAME="Connection_access" HREF="manual.ru.html#Connection_access">4.2.9  Управление доступом, этап 1: верификация подсоединения</A>
+<LI><A NAME="Request_access" HREF="manual.ru.html#Request_access">4.2.10  Управление доступом, этап 2: верификация запросов</A>
+<LI><A NAME="Access_denied" HREF="manual.ru.html#Access_denied">4.2.11  Причины появления ошибок <code>Access denied</code> ("в доступе отказано")</A>
+</UL>
+<LI><A NAME="User_Account_Management" HREF="manual.ru.html#User_Account_Management">4.3  Управление учетными записями пользователей MySQL</A>
+<UL>
+<LI><A NAME="GRANT" HREF="manual.ru.html#GRANT">4.3.1  Синтаксис команд <code>GRANT</code> и <code>REVOKE</code></A>
+<LI><A NAME="User_names" HREF="manual.ru.html#User_names">4.3.2  Имена пользователей MySQL и пароли</A>
+<LI><A NAME="Privilege_changes" HREF="manual.ru.html#Privilege_changes">4.3.3  Когда изменения в привилегиях вступают в силу</A>
+<LI><A NAME="Default_privileges" HREF="manual.ru.html#Default_privileges">4.3.4  Задание изначальных привилегий MySQL</A>
+<LI><A NAME="Adding_users" HREF="manual.ru.html#Adding_users">4.3.5  Добавление новых пользователей в MySQL</A>
+<LI><A NAME="User_resources" HREF="manual.ru.html#User_resources">4.3.6  Ограничение ресурсов пользователя</A>
+<LI><A NAME="Passwords" HREF="manual.ru.html#Passwords">4.3.7  Задание паролей</A>
+<LI><A NAME="Password_security" HREF="manual.ru.html#Password_security">4.3.8  Обеспечение безопасности своего пароля</A>
+<LI><A NAME="Secure_connections" HREF="manual.ru.html#Secure_connections">4.3.9  Использование безопасных соединений</A>
+<UL>
+<LI><A NAME="Secure_basics" HREF="manual.ru.html#Secure_basics">4.3.9.1  Основные сведения</A>
+<LI><A NAME="Secure_requirements" HREF="manual.ru.html#Secure_requirements">4.3.9.2  Требования</A>
+<LI><A NAME="Secure_Create_Certs" HREF="manual.ru.html#Secure_Create_Certs">4.3.9.3  Создание SSL-сертификатов</A>
+<LI><A NAME="Secure_GRANT" HREF="manual.ru.html#Secure_GRANT">4.3.9.4  Параметры команды <code>GRANT</code></A>
+</UL>
+</UL>
+<LI><A NAME="Disaster_Prevention" HREF="manual.ru.html#Disaster_Prevention">4.4  Предотвращение катастроф и восстановление</A>
+<UL>
+<LI><A NAME="Backup" HREF="manual.ru.html#Backup">4.4.1  Резервное копирование баз данных</A>
+<LI><A NAME="BACKUP_TABLE" HREF="manual.ru.html#BACKUP_TABLE">4.4.2  Синтаксис <code>BACKUP TABLE</code></A>
+<LI><A NAME="RESTORE_TABLE" HREF="manual.ru.html#RESTORE_TABLE">4.4.3  Синтаксис <code>RESTORE TABLE</code></A>
+<LI><A NAME="CHECK_TABLE" HREF="manual.ru.html#CHECK_TABLE">4.4.4  Синтаксис <code>CHECK TABLE</code></A>
+<LI><A NAME="REPAIR_TABLE" HREF="manual.ru.html#REPAIR_TABLE">4.4.5  Синтаксис <code>REPAIR TABLE</code></A>
+<LI><A NAME="Table_maintenance" HREF="manual.ru.html#Table_maintenance">4.4.6  Использование <code>myisamchk</code> для профилактики таблиц и послеаварийного</A>
+<UL>
+<LI><A NAME="myisamchk_syntax" HREF="manual.ru.html#myisamchk_syntax">4.4.6.1  Синтаксис запуска <code>myisamchk</code></A>
+<LI><A NAME="myisamchk_general_options" HREF="manual.ru.html#myisamchk_general_options">4.4.6.2  Общие опции для <code>myisamchk</code></A>
+<LI><A NAME="myisamchk_check_options" HREF="manual.ru.html#myisamchk_check_options">4.4.6.3  Проверочные опции для <code>myisamchk</code></A>
+<LI><A NAME="myisamchk_repair_options" HREF="manual.ru.html#myisamchk_repair_options">4.4.6.4  Опции исправления для <code>myisamchk</code></A>
+<LI><A NAME="myisamchk_other_options" HREF="manual.ru.html#myisamchk_other_options">4.4.6.5  Другие опции для <code>myisamchk</code></A>
+<LI><A NAME="myisamchk_memory" HREF="manual.ru.html#myisamchk_memory">4.4.6.6  Использование памяти утилитой <code>myisamchk</code></A>
+<LI><A NAME="Crash_recovery" HREF="manual.ru.html#Crash_recovery">4.4.6.7  Использование myisamchk для послеаварийного восстановления</A>
+<LI><A NAME="Check" HREF="manual.ru.html#Check">4.4.6.8  Как проверять таблицы на ошибки</A>
+<LI><A NAME="Repair" HREF="manual.ru.html#Repair">4.4.6.9  Как ремонтировать таблицы</A>
+<LI><A NAME="Optimisation" HREF="manual.ru.html#Optimisation">4.4.6.10  Оптимизация  таблиц</A>
+</UL>
+<LI><A NAME="Maintenance_regimen" HREF="manual.ru.html#Maintenance_regimen">4.4.7  Настройка режима профилактики таблиц</A>
+<LI><A NAME="Table-info" HREF="manual.ru.html#Table-info">4.4.8  Получение информации о таблице</A>
+</UL>
+<LI><A NAME="Database_Administration" HREF="manual.ru.html#Database_Administration">4.5  Справочник по языку администрирования баз данных</A>
+<UL>
+<LI><A NAME="OPTIMIZE_TABLE" HREF="manual.ru.html#OPTIMIZE_TABLE">4.5.1  Синтаксис  команды <code>OPTIMIZE TABLE</code></A>
+<LI><A NAME="ANALYZE_TABLE" HREF="manual.ru.html#ANALYZE_TABLE">4.5.2  Синтаксис команды <code>ANALYZE TABLE</code></A>
+<LI><A NAME="FLUSH" HREF="manual.ru.html#FLUSH">4.5.3  Синтаксис команды <code>FLUSH</code></A>
+<LI><A NAME="RESET" HREF="manual.ru.html#RESET">4.5.4  Синтаксис команды <code>RESET</code></A>
+<LI><A NAME="KILL" HREF="manual.ru.html#KILL">4.5.5  Синтаксис команды <code>KILL</code></A>
+<LI><A NAME="SHOW" HREF="manual.ru.html#SHOW">4.5.6  Синтаксис команды <code>SHOW</code></A>
+<UL>
+<LI><A NAME="SHOW_DATABASE_INFO" HREF="manual.ru.html#SHOW_DATABASE_INFO">4.5.6.1  Получение информации по базам данных, таблицам, столбцам и индексам</A>
+<LI><A NAME="SHOW_TABLE_STATUS" HREF="manual.ru.html#SHOW_TABLE_STATUS">4.5.6.2  <code>SHOW TABLE STATUS</code></A>
+<LI><A NAME="SHOW_STATUS" HREF="manual.ru.html#SHOW_STATUS">4.5.6.3  <code>SHOW STATUS</code></A>
+<LI><A NAME="SHOW_VARIABLES" HREF="manual.ru.html#SHOW_VARIABLES">4.5.6.4  <code>SHOW VARIABLES</code></A>
+<LI><A NAME="SHOW_LOGS" HREF="manual.ru.html#SHOW_LOGS">4.5.6.5  <code>SHOW LOGS</code></A>
+<LI><A NAME="SHOW_PROCESSLIST" HREF="manual.ru.html#SHOW_PROCESSLIST">4.5.6.6  <code>SHOW PROCESSLIST</code></A>
+<LI><A NAME="SHOW_GRANTS" HREF="manual.ru.html#SHOW_GRANTS">4.5.6.7  <code>SHOW GRANTS</code></A>
+<LI><A NAME="SHOW_CREATE_TABLE" HREF="manual.ru.html#SHOW_CREATE_TABLE">4.5.6.8  <code>SHOW CREATE TABLE</code></A>
+<LI><A NAME="SHOW_WARNINGS" HREF="manual.ru.html#SHOW_WARNINGS">4.5.6.9  <code>SHOW WARNINGS | ERRORS</code></A>
+<LI><A NAME="SHOW_TABLE_TYPES" HREF="manual.ru.html#SHOW_TABLE_TYPES">4.5.6.10  <code>SHOW TABLE TYPES</code></A>
+<LI><A NAME="SHOW_PRIVILEGES" HREF="manual.ru.html#SHOW_PRIVILEGES">4.5.6.11  <code>SHOW PRIVILEGES</code></A>
+</UL>
+</UL>
+<LI><A NAME="Localisation" HREF="manual.ru.html#Localisation">4.6  Локализация MySQL и использование национальных алфавитов</A>
+<UL>
+<LI><A NAME="Character_sets" HREF="manual.ru.html#Character_sets">4.6.1  Набор символов, применяющийся для записи данных и сортировки</A>
+<UL>
+<LI><A NAME="German_character_set" HREF="manual.ru.html#German_character_set">4.6.1.1  Набор символов немецкого алфавита</A>
+</UL>
+<LI><A NAME="Languages" HREF="manual.ru.html#Languages">4.6.2  Сообщения об ошибках на языках, отличных от английского</A>
+<LI><A NAME="Adding_character_set" HREF="manual.ru.html#Adding_character_set">4.6.3  Добавление набора символов</A>
+<LI><A NAME="Character_arrays" HREF="manual.ru.html#Character_arrays">4.6.4  Массивы определения символов</A>
+<LI><A NAME="String_collating" HREF="manual.ru.html#String_collating">4.6.5  Поддержка упорядочивания строк</A>
+<LI><A NAME="Multi-byte_characters" HREF="manual.ru.html#Multi-byte_characters">4.6.6  Поддержка многобайтовых символов</A>
+<LI><A NAME="Problems_with_character_sets" HREF="manual.ru.html#Problems_with_character_sets">4.6.7  Проблемы с наборами символов</A>
+</UL>
+<LI><A NAME="Server-Side_Scripts" HREF="manual.ru.html#Server-Side_Scripts">4.7  Серверные сценарии и утилиты MySQL</A>
+<UL>
+<LI><A NAME="Server-Side_Overview" HREF="manual.ru.html#Server-Side_Overview">4.7.1  Обзор серверных сценариев и утилит</A>
+<LI><A NAME="safe_mysqld" HREF="manual.ru.html#safe_mysqld">4.7.2  <code>safe_mysqld</code>, оболочка <code>mysqld</code></A>
+<LI><A NAME="mysqld_multi" HREF="manual.ru.html#mysqld_multi">4.7.3  <code>Mysqld_multi</code>, программа для управления множеством серверов MySQL</A>
+<LI><A NAME="myisampack" HREF="manual.ru.html#myisampack">4.7.4  <code>myisampack</code>, MySQL-генератор сжатых таблиц (только для чтения)</A>
+<LI><A NAME="mysqld-max" HREF="manual.ru.html#mysqld-max">4.7.5  <code>mysqld-max</code>, расширенный сервер <code>mysqld</code></A>
+</UL>
+<LI><A NAME="Client-Side_Scripts" HREF="manual.ru.html#Client-Side_Scripts">4.8  Клиентские сценарии и утилиты MySQL</A>
+<UL>
+<LI><A NAME="Client-Side_Overview" HREF="manual.ru.html#Client-Side_Overview">4.8.1  Обзор клиентских сценариев и утилит</A>
+<LI><A NAME="mysql" HREF="manual.ru.html#mysql">4.8.2  <code>mysql</code>, Утилита командной строки</A>
+<LI><A NAME="mysqladmin" HREF="manual.ru.html#mysqladmin">4.8.3  <code>mysqladmin</code>, Администрирование MySQL-сервера.</A>
+<LI><A NAME="Using_mysqlcheck" HREF="manual.ru.html#Using_mysqlcheck">4.8.4  Использование <code>mysqlcheck</code> для сопровождения и аварийного восстановления таблиц.</A>
+<LI><A NAME="mysqldump" HREF="manual.ru.html#mysqldump">4.8.5  <code>mysqldump</code>, Получение дампов данных и структуры таблицы</A>
+<LI><A NAME="mysqlhotcopy" HREF="manual.ru.html#mysqlhotcopy">4.8.6  <code>mysqlhotcopy</code>, Копирование баз данных и таблиц MySQL</A>
+<LI><A NAME="mysqlimport" HREF="manual.ru.html#mysqlimport">4.8.7  <code>mysqlimport</code>, импорт данных из текстовых файлов</A>
+<LI><A NAME="mysqlshow" HREF="manual.ru.html#mysqlshow">4.8.8  <code>mysqlshow</code>, просмотр баз данных, таблиц и столбцов</A>
+<LI><A NAME="mysql_config" HREF="manual.ru.html#mysql_config">4.8.9  <code>mysql_config</code>, Получение опций компиляции для компиляции клиентских программ</A>
+<LI><A NAME="perror" HREF="manual.ru.html#perror">4.8.10  <code>perror</code>, разъяснение кодов ошибок</A>
+<LI><A NAME="Batch_Commands" HREF="manual.ru.html#Batch_Commands">4.8.11  Как запускать SQL-команды из текстового файла</A>
+</UL>
+<LI><A NAME="Log_Files" HREF="manual.ru.html#Log_Files">4.9  Файлы журналов MySQL</A>
+<UL>
+<LI><A NAME="Error_log" HREF="manual.ru.html#Error_log">4.9.1  Журнал ошибок</A>
+<LI><A NAME="Query_log" HREF="manual.ru.html#Query_log">4.9.2  Общий журнал запросов</A>
+<LI><A NAME="Update_log" HREF="manual.ru.html#Update_log">4.9.3  Журнал обновлений (update)</A>
+<LI><A NAME="Binary_log" HREF="manual.ru.html#Binary_log">4.9.4  Бинарный журнал обновлений</A>
+<LI><A NAME="Slow_query_log" HREF="manual.ru.html#Slow_query_log">4.9.5  Журнал медленных запросов</A>
+<LI><A NAME="Log_file_maintenance" HREF="manual.ru.html#Log_file_maintenance">4.9.6  Обслуживание файлов журналов</A>
+</UL>
+<LI><A NAME="Replication" HREF="manual.ru.html#Replication">4.10  Репликация в MySQL</A>
+<UL>
+<LI><A NAME="Replication_Intro" HREF="manual.ru.html#Replication_Intro">4.10.1  Введение</A>
+<LI><A NAME="Replication_Implementation" HREF="manual.ru.html#Replication_Implementation">4.10.2  Как реализована репликация: обзор</A>
+<LI><A NAME="Replication_HOWTO" HREF="manual.ru.html#Replication_HOWTO">4.10.3  Как настроить репликацию</A>
+<LI><A NAME="Replication_Features" HREF="manual.ru.html#Replication_Features">4.10.4  Возможности репликации и известные проблемы</A>
+<LI><A NAME="Replication_Options" HREF="manual.ru.html#Replication_Options">4.10.5  Опции репликации в файле <tt>`my.cnf'</tt></A>
+<LI><A NAME="Replication_SQL" HREF="manual.ru.html#Replication_SQL">4.10.6  SQL-команды, относящиеся к репликации</A>
+<LI><A NAME="Replication_FAQ" HREF="manual.ru.html#Replication_FAQ">4.10.7  Часто задаваемые вопросы по репликации</A>
+<LI><A NAME="Replication_Problems" HREF="manual.ru.html#Replication_Problems">4.10.8  Поиск неисправностей репликации</A>
+</UL>
+</UL>
+<LI><A NAME="MySQL_Optimisation" HREF="manual.ru.html#MySQL_Optimisation">5  Оптимизация в MySQL</A>
+<UL>
+<LI><A NAME="Optimise_Overview" HREF="manual.ru.html#Optimise_Overview">5.1  Oбзор оптимизации</A>
+<UL>
+<LI><A NAME="Design_Limitations" HREF="manual.ru.html#Design_Limitations">5.1.1  Конструктивные ограничения MySQL/компромиссы</A>
+<LI><A NAME="Portability" HREF="manual.ru.html#Portability">5.1.2  Вопросы переносимости</A>
+<LI><A NAME="Internal_use" HREF="manual.ru.html#Internal_use">5.1.3  Для чего мы использовали MySQL?</A>
+<LI><A NAME="MySQL_Benchmarks" HREF="manual.ru.html#MySQL_Benchmarks">5.1.4  Набор тестов MySQL (The MySQL Benchmark Suite)</A>
+<LI><A NAME="Custom_Benchmarks" HREF="manual.ru.html#Custom_Benchmarks">5.1.5  Использование собственных тестов</A>
+</UL>
+<LI><A NAME="Query_Speed" HREF="manual.ru.html#Query_Speed">5.2  Оптимизация <code>SELECT</code> и других запросов</A>
+<UL>
+<LI><A NAME="EXPLAIN" HREF="manual.ru.html#EXPLAIN">5.2.1  Синтаксис оператора <code>EXPLAIN</code> (получение информации о <code>SELECT</code>)</A>
+<LI><A NAME="Estimating_performance" HREF="manual.ru.html#Estimating_performance">5.2.2  Оценка производительности запроса</A>
+<LI><A NAME="SELECT_speed" HREF="manual.ru.html#SELECT_speed">5.2.3  Скорость выполнения запросов <code>SELECT</code></A>
+<LI><A NAME="Where_optimisations" HREF="manual.ru.html#Where_optimisations">5.2.4  Как MySQL оптимизирует выражения <code>WHERE</code></A>
+<LI><A NAME="DISTINCT_optimisation" HREF="manual.ru.html#DISTINCT_optimisation">5.2.5  Как MySQL оптимизирует <code>DISTINCT</code></A>
+<LI><A NAME="LEFT_JOIN_optimisation" HREF="manual.ru.html#LEFT_JOIN_optimisation">5.2.6  Как MySQL оптимизирует <code>LEFT JOIN</code> и <code>RIGHT JOIN</code></A>
+<LI><A NAME="ORDER_BY_optimisation" HREF="manual.ru.html#ORDER_BY_optimisation">5.2.7  Как MySQL оптимизирует <code>ORDER BY</code></A>
+<LI><A NAME="LIMIT_optimisation" HREF="manual.ru.html#LIMIT_optimisation">5.2.8  Как MySQL оптимизирует <code>LIMIT</code></A>
+<LI><A NAME="Insert_speed" HREF="manual.ru.html#Insert_speed">5.2.9  Скорость выполнения запросов <code>INSERT</code></A>
+<LI><A NAME="Update_speed" HREF="manual.ru.html#Update_speed">5.2.10  Скорость выполнения запросов <code>UPDATE</code></A>
+<LI><A NAME="Delete_speed" HREF="manual.ru.html#Delete_speed">5.2.11  Скорость выполнения запросов <code>DELETE</code></A>
+<LI><A NAME="Tips" HREF="manual.ru.html#Tips">5.2.12  Другие советы по оптимизации</A>
+</UL>
+<LI><A NAME="Locking_Issues" HREF="manual.ru.html#Locking_Issues">5.3  Вопросы блокировок</A>
+<UL>
+<LI><A NAME="Internal_locking" HREF="manual.ru.html#Internal_locking">5.3.1  Как MySQL блокирует таблицы</A>
+<LI><A NAME="Table_locking" HREF="manual.ru.html#Table_locking">5.3.2  Вопросы блокирования таблиц</A>
+</UL>
+<LI><A NAME="Optimising_Database_Structure" HREF="manual.ru.html#Optimising_Database_Structure">5.4  Оптимизация структуры базы данных</A>
+<UL>
+<LI><A NAME="Design" HREF="manual.ru.html#Design">5.4.1  Конструктивные особенности MySQL</A>
+<LI><A NAME="Data_size" HREF="manual.ru.html#Data_size">5.4.2  Сделайте объем данных как можно меньше</A>
+<LI><A NAME="MySQL_indexes" HREF="manual.ru.html#MySQL_indexes">5.4.3  Использование индексов в MySQL</A>
+<LI><A NAME="Indexes" HREF="manual.ru.html#Indexes">5.4.4  Индексы столбцов</A>
+<LI><A NAME="Multiple-column_indexes" HREF="manual.ru.html#Multiple-column_indexes">5.4.5  Многостолбцовые индексы</A>
+<LI><A NAME="Open_tables" HREF="manual.ru.html#Open_tables">5.4.6  Почему так много открытых таблиц?</A>
+<LI><A NAME="Table_cache" HREF="manual.ru.html#Table_cache">5.4.7  Открытие и закрытие таблиц в MySQL</A>
+<LI><A NAME="Creating_many_tables" HREF="manual.ru.html#Creating_many_tables">5.4.8  Недостатки создания множества таблиц в одной базе данных</A>
+</UL>
+<LI><A NAME="Optimising_the_Server" HREF="manual.ru.html#Optimising_the_Server">5.5  Оптимизация сервера MySQL</A>
+<UL>
+<LI><A NAME="System" HREF="manual.ru.html#System">5.5.1  Настройка параметров системы, компляции и запуска</A>
+<LI><A NAME="Server_parameters" HREF="manual.ru.html#Server_parameters">5.5.2  Настройка параметров сервера</A>
+<LI><A NAME="Compile_and_link_options" HREF="manual.ru.html#Compile_and_link_options">5.5.3  Как компиляция и линкование влияет на скорость MySQL</A>
+<LI><A NAME="Memory_use" HREF="manual.ru.html#Memory_use">5.5.4  Как MySQL использует память</A>
+<LI><A NAME="DNS" HREF="manual.ru.html#DNS">5.5.5  Как MySQL использует DNS</A>
+<LI><A NAME="SET_OPTION" HREF="manual.ru.html#SET_OPTION">5.5.6  Синтаксис команды <code>SET</code></A>
+</UL>
+<LI><A NAME="Disk_issues" HREF="manual.ru.html#Disk_issues">5.6  Вопросы, относящиеся к диску</A>
+<UL>
+<LI><A NAME="Symbolic_links" HREF="manual.ru.html#Symbolic_links">5.6.1  Использование символических ссылок</A>
+<UL>
+<LI><A NAME="Symbolic_links_to_databases" HREF="manual.ru.html#Symbolic_links_to_databases">5.6.1.1  Использование символических ссылок для баз данных</A>
+<LI><A NAME="Symbolic_links_to_tables" HREF="manual.ru.html#Symbolic_links_to_tables">5.6.1.2  Использование символических ссылок для таблиц</A>
+</UL>
+</UL>
+</UL>
+<LI><A NAME="Reference" HREF="manual.ru.html#Reference">6  Справочник по языку MySQL</A>
+<UL>
+<LI><A NAME="Language_Structure" HREF="manual.ru.html#Language_Structure">6.1  Структура языка</A>
+<UL>
+<LI><A NAME="Literals" HREF="manual.ru.html#Literals">6.1.1  Литералы: представление строк и чисел</A>
+<UL>
+<LI><A NAME="String_syntax" HREF="manual.ru.html#String_syntax">6.1.1.1  Cтроки</A>
+<LI><A NAME="Number_syntax" HREF="manual.ru.html#Number_syntax">6.1.1.2  Числа</A>
+<LI><A NAME="Hexadecimal_values" HREF="manual.ru.html#Hexadecimal_values">6.1.1.3  Шестнадцатеричные величины</A>
+<LI><A NAME="NULL_values" HREF="manual.ru.html#NULL_values">6.1.1.4  Значения <code>NULL</code></A>
+</UL>
+<LI><A NAME="Legal_names" HREF="manual.ru.html#Legal_names">6.1.2  Имена баз данных, таблиц, столбцов, индексы псевдонимы</A>
+<LI><A NAME="Name_case_sensitivity" HREF="manual.ru.html#Name_case_sensitivity">6.1.3  Чувствительность имен к регистру</A>
+<LI><A NAME="Variables" HREF="manual.ru.html#Variables">6.1.4  Переменные пользователя</A>
+<LI><A NAME="System_Variables" HREF="manual.ru.html#System_Variables">6.1.5  Системные переменные</A>
+<LI><A NAME="Comments" HREF="manual.ru.html#Comments">6.1.6  Синтаксис  комментариев</A>
+<LI><A NAME="Reserved_words" HREF="manual.ru.html#Reserved_words">6.1.7  ``Придирчив'' ли MySQL к зарезервированным словам?</A>
+</UL>
+<LI><A NAME="Column_types" HREF="manual.ru.html#Column_types">6.2  Типы данных столбцов</A>
+<UL>
+<LI><A NAME="Numeric_types" HREF="manual.ru.html#Numeric_types">6.2.1  Числовые типы данных</A>
+<LI><A NAME="Date_and_time_types" HREF="manual.ru.html#Date_and_time_types">6.2.2  Типы данных даты и времени</A>
+<UL>
+<LI><A NAME="Y2K_issues" HREF="manual.ru.html#Y2K_issues">6.2.2.1  Проблема 2000 года и типы данных</A>
+<LI><A NAME="DATETIME" HREF="manual.ru.html#DATETIME">6.2.2.2  Типы данных <code>DATETIME</code>, <code>DATE</code> и <code>TIMESTAMP</code></A>
+<LI><A NAME="TIME" HREF="manual.ru.html#TIME">6.2.2.3  Тип данных <code>TIME</code></A>
+<LI><A NAME="YEAR" HREF="manual.ru.html#YEAR">6.2.2.4  Тип данных  <code>YEAR</code></A>
+</UL>
+<LI><A NAME="String_types" HREF="manual.ru.html#String_types">6.2.3  Символьные типы данных</A>
+<UL>
+<LI><A NAME="CHAR" HREF="manual.ru.html#CHAR">6.2.3.1  Типы данных CHAR и VARCHAR</A>
+<LI><A NAME="BLOB" HREF="manual.ru.html#BLOB">6.2.3.2  Типы данных <code>BLOB</code> и <code>TEXT</code></A>
+<LI><A NAME="ENUM" HREF="manual.ru.html#ENUM">6.2.3.3  Тип перечисления <code>ENUM</code></A>
+<LI><A NAME="SET" HREF="manual.ru.html#SET">6.2.3.4  Тип множества <code>SET</code></A>
+</UL>
+<LI><A NAME="Choosing_types" HREF="manual.ru.html#Choosing_types">6.2.4  Выбор правильного типа данных в столбце</A>
+<LI><A NAME="Other-vendor_column_types" HREF="manual.ru.html#Other-vendor_column_types">6.2.5  Использование типов столбцов из других баз данных</A>
+<LI><A NAME="Storage_requirements" HREF="manual.ru.html#Storage_requirements">6.2.6  Требования к памяти для различных типов столбцов</A>
+</UL>
+<LI><A NAME="Functions" HREF="manual.ru.html#Functions">6.3  Функции, используемые в операторах <code>SELECT</code> и <code>WHERE</code></A>
+<UL>
+<LI><A NAME="Non-typed_Operators" HREF="manual.ru.html#Non-typed_Operators">6.3.1  Операторы и функции общего назначения</A>
+<UL>
+<LI><A NAME="Parentheses" HREF="manual.ru.html#Parentheses">6.3.1.1  Круглые скобки</A>
+<LI><A NAME="Comparison_Operators" HREF="manual.ru.html#Comparison_Operators">6.3.1.2  Операторы сравнения</A>
+<LI><A NAME="Logical_Operators" HREF="manual.ru.html#Logical_Operators">6.3.1.3  Логические операторы</A>
+<LI><A NAME="Control_flow_functions" HREF="manual.ru.html#Control_flow_functions">6.3.1.4  Функции потока управления программой</A>
+</UL>
+<LI><A NAME="String_functions" HREF="manual.ru.html#String_functions">6.3.2  Строковые функции</A>
+<UL>
+<LI><A NAME="String_comparison_functions" HREF="manual.ru.html#String_comparison_functions">6.3.2.1  Функции сравнения строк</A>
+<LI><A NAME="Case_Sensitivity_Operators" HREF="manual.ru.html#Case_Sensitivity_Operators">6.3.2.2  Чувствительность к регистру</A>
+</UL>
+<LI><A NAME="Numeric_Functions" HREF="manual.ru.html#Numeric_Functions">6.3.3  Числовые функции</A>
+<UL>
+<LI><A NAME="Arithmetic_functions" HREF="manual.ru.html#Arithmetic_functions">6.3.3.1  Арифметические операции</A>
+<LI><A NAME="Mathematical_functions" HREF="manual.ru.html#Mathematical_functions">6.3.3.2  Математические функции</A>
+</UL>
+<LI><A NAME="Date_and_time_functions" HREF="manual.ru.html#Date_and_time_functions">6.3.4  Функции даты и времени</A>
+<LI><A NAME="Cast_Functions" HREF="manual.ru.html#Cast_Functions">6.3.5  Функции приведения типов</A>
+<LI><A NAME="Other_Functions" HREF="manual.ru.html#Other_Functions">6.3.6  Другие функции</A>
+<UL>
+<LI><A NAME="Bit_functions" HREF="manual.ru.html#Bit_functions">6.3.6.1  Битовые функции</A>
+<LI><A NAME="Miscellaneous_functions" HREF="manual.ru.html#Miscellaneous_functions">6.3.6.2  Разные функции</A>
+</UL>
+<LI><A NAME="Group_by_functions" HREF="manual.ru.html#Group_by_functions">6.3.7  Функции, используемые в операторах <code>GROUP BY</code></A>
+</UL>
+<LI><A NAME="Data_Manipulation" HREF="manual.ru.html#Data_Manipulation">6.4  Обработка данных: SELECT, INSERT, UPDATE, DELETE</A>
+<UL>
+<LI><A NAME="SELECT" HREF="manual.ru.html#SELECT">6.4.1  Синтаксис оператора <code>SELECT</code></A>
+<UL>
+<LI><A NAME="JOIN" HREF="manual.ru.html#JOIN">6.4.1.1  Синтаксис оператора <code>JOIN</code></A>
+<LI><A NAME="UNION" HREF="manual.ru.html#UNION">6.4.1.2  Синтаксис оператора  <code>UNION</code></A>
+</UL>
+<LI><A NAME="HANDLER" HREF="manual.ru.html#HANDLER">6.4.2  Синтаксис оператора  <code>HANDLER</code></A>
+<LI><A NAME="INSERT" HREF="manual.ru.html#INSERT">6.4.3  Синтаксис оператора <code>INSERT</code></A>
+<UL>
+<LI><A NAME="INSERT_SELECT" HREF="manual.ru.html#INSERT_SELECT">6.4.3.1  Синтаксис оператора <code>INSERT ... SELECT</code></A>
+</UL>
+<LI><A NAME="INSERT_DELAYED" HREF="manual.ru.html#INSERT_DELAYED">6.4.4  Синтаксис оператора <code>INSERT DELAYED</code></A>
+<LI><A NAME="UPDATE" HREF="manual.ru.html#UPDATE">6.4.5  Синтаксис оператора  <code>UPDATE</code></A>
+<LI><A NAME="DELETE" HREF="manual.ru.html#DELETE">6.4.6  Синтаксис оператора <code>DELETE</code></A>
+<LI><A NAME="TRUNCATE" HREF="manual.ru.html#TRUNCATE">6.4.7  Синтаксис оператора <code>TRUNCATE</code></A>
+<LI><A NAME="REPLACE" HREF="manual.ru.html#REPLACE">6.4.8  Синтаксис оператора <code>REPLACE</code></A>
+<LI><A NAME="LOAD_DATA" HREF="manual.ru.html#LOAD_DATA">6.4.9  Синтаксис оператора  <code>LOAD DATA INFILE</code></A>
+<LI><A NAME="DO" HREF="manual.ru.html#DO">6.4.10  Синтаксис оператора <code>DO</code></A>
+</UL>
+<LI><A NAME="Data_Definition" HREF="manual.ru.html#Data_Definition">6.5  Определение данных: <code>CREATE</code>, <code>DROP</code>, <code>ALTER</code></A>
+<UL>
+<LI><A NAME="CREATE_DATABASE" HREF="manual.ru.html#CREATE_DATABASE">6.5.1  Синтаксис оператора <code>CREATE DATABASE</code></A>
+<LI><A NAME="DROP_DATABASE" HREF="manual.ru.html#DROP_DATABASE">6.5.2  Синтаксис оператора  <code>DROP DATABASE</code></A>
+<LI><A NAME="CREATE_TABLE" HREF="manual.ru.html#CREATE_TABLE">6.5.3  Синтаксис оператора <code>CREATE TABLE</code></A>
+<UL>
+<LI><A NAME="Silent_column_changes" HREF="manual.ru.html#Silent_column_changes">6.5.3.1  Молчаливые изменения определений столбцов</A>
+</UL>
+<LI><A NAME="ALTER_TABLE" HREF="manual.ru.html#ALTER_TABLE">6.5.4  Синтаксис оператора <code>ALTER TABLE</code></A>
+<LI><A NAME="RENAME_TABLE" HREF="manual.ru.html#RENAME_TABLE">6.5.5  Синтаксис оператора  <code>RENAME TABLE</code></A>
+<LI><A NAME="DROP_TABLE" HREF="manual.ru.html#DROP_TABLE">6.5.6  Синтаксис оператора  <code>DROP TABLE</code></A>
+<LI><A NAME="CREATE_INDEX" HREF="manual.ru.html#CREATE_INDEX">6.5.7  Синтаксис оператора <code>CREATE INDEX</code></A>
+<LI><A NAME="DROP_INDEX" HREF="manual.ru.html#DROP_INDEX">6.5.8  Синтаксис оператора  <code>DROP INDEX</code></A>
+</UL>
+<LI><A NAME="Basic_User_Commands" HREF="manual.ru.html#Basic_User_Commands">6.6  Основные команды пользовательских программ MySQL</A>
+<UL>
+<LI><A NAME="USE" HREF="manual.ru.html#USE">6.6.1  Синтаксис команды <code>USE</code></A>
+<LI><A NAME="DESCRIBE" HREF="manual.ru.html#DESCRIBE">6.6.2  Синтаксис команды <code>DESCRIBE</code> (Получение информации о столбцах)</A>
+</UL>
+<LI><A NAME="Transactional_Commands" HREF="manual.ru.html#Transactional_Commands">6.7  Команды управления транзакциями и блокировками в MySQL</A>
+<UL>
+<LI><A NAME="COMMIT" HREF="manual.ru.html#COMMIT">6.7.1  Синтаксис команд <code>BEGIN/COMMIT/ROLLBACK</code></A>
+<LI><A NAME="LOCK_TABLES" HREF="manual.ru.html#LOCK_TABLES">6.7.2  Синтаксис команд <code>LOCK TABLES/UNLOCK TABLES</code></A>
+<LI><A NAME="SET_TRANSACTION" HREF="manual.ru.html#SET_TRANSACTION">6.7.3  Синтаксис команды <code>SET TRANSACTION</code></A>
+</UL>
+<LI><A NAME="Fulltext_Search" HREF="manual.ru.html#Fulltext_Search">6.8  Полнотекстовый поиск в MySQL</A>
+<UL>
+<LI><A NAME="Fulltext_Restrictions" HREF="manual.ru.html#Fulltext_Restrictions">6.8.1  Ограничения для полнотекстового поиска</A>
+<LI><A NAME="Fulltext_Fine-tuning" HREF="manual.ru.html#Fulltext_Fine-tuning">6.8.2  Тонкая настройка полнотекстового поиска в MySQL</A>
+<LI><A NAME="Fulltext_TODO" HREF="manual.ru.html#Fulltext_TODO">6.8.3  Предстоящие доработки по полнотекстовому поиску</A>
+</UL>
+<LI><A NAME="Query_Cache" HREF="manual.ru.html#Query_Cache">6.9  Кэш запросов в MySQL</A>
+<UL>
+<LI><A NAME="Query_Cache_How" HREF="manual.ru.html#Query_Cache_How">6.9.1  Как работает кэширование запросов</A>
+<LI><A NAME="Query_Cache_Configuration" HREF="manual.ru.html#Query_Cache_Configuration">6.9.2  Конфигурация кэша запросов</A>
+<LI><A NAME="Query_Cache_in_SELECT" HREF="manual.ru.html#Query_Cache_in_SELECT">6.9.3  Параметры кэша запросов в запросе <code>SELECT</code></A>
+<LI><A NAME="Query_Cache_Status_and_Maintenance" HREF="manual.ru.html#Query_Cache_Status_and_Maintenance">6.9.4  Статус и поддержка кэша запросов</A>
+</UL>
+</UL>
+<LI><A NAME="Table_types" HREF="manual.ru.html#Table_types">7  Типы  таблиц MySQL</A>
+<UL>
+<LI><A NAME="MyISAM" HREF="manual.ru.html#MyISAM">7.1  Таблицы <code>MyISAM</code></A>
+<UL>
+<LI><A NAME="Key_space" HREF="manual.ru.html#Key_space">7.1.1  Пространство, необходимое  для  ключей</A>
+<LI><A NAME="MyISAM_table_formats" HREF="manual.ru.html#MyISAM_table_formats">7.1.2  Форматы таблиц <code>MyISAM</code></A>
+<UL>
+<LI><A NAME="Static_format" HREF="manual.ru.html#Static_format">7.1.2.1  Характеристики статических таблиц (с фиксированной длиной)</A>
+<LI><A NAME="Dynamic_format" HREF="manual.ru.html#Dynamic_format">7.1.2.2  Характеристики динамических таблиц</A>
+<LI><A NAME="Compressed_format" HREF="manual.ru.html#Compressed_format">7.1.2.3  Характеристики сжатых таблиц</A>
+</UL>
+<LI><A NAME="MyISAM_table_problems" HREF="manual.ru.html#MyISAM_table_problems">7.1.3  Проблемы с таблицами <code>MyISAM</code>.</A>
+<UL>
+<LI><A NAME="Corrupted_MyISAM_tables" HREF="manual.ru.html#Corrupted_MyISAM_tables">7.1.3.1  Повреждения таблиц <code>MyISAM</code></A>
+<LI><A NAME="MyISAM_table_close" HREF="manual.ru.html#MyISAM_table_close">7.1.3.2  Clients is using or hasn't closed the table properly</A>
+</UL>
+</UL>
+<LI><A NAME="MERGE" HREF="manual.ru.html#MERGE">7.2  Таблицы <code>MERGE</code></A>
+<UL>
+<LI><A NAME="MERGE_table_problems" HREF="manual.ru.html#MERGE_table_problems">7.2.1  Проблемы при работе с таблицами <code>MERGE</code></A>
+</UL>
+<LI><A NAME="ISAM" HREF="manual.ru.html#ISAM">7.3  Таблицы <code>ISAM</code></A>
+<LI><A NAME="HEAP" HREF="manual.ru.html#HEAP">7.4  Таблицы <code>HEAP</code></A>
+<LI><A NAME="InnoDB" HREF="manual.ru.html#InnoDB">7.5  Таблицы <code>InnoDB</code></A>
+<UL>
+<LI><A NAME="InnoDB_overview" HREF="manual.ru.html#InnoDB_overview">7.5.1  Обзор таблиц InnoDB</A>
+<LI><A NAME="InnoDB_start" HREF="manual.ru.html#InnoDB_start">7.5.2  Параметры запуска InnoDB</A>
+<LI><A NAME="InnoDB_init" HREF="manual.ru.html#InnoDB_init">7.5.3  Создание табличной области InnoDB</A>
+<UL>
+<LI><A NAME="Error_creating_InnoDB" HREF="manual.ru.html#Error_creating_InnoDB">7.5.3.1  Если во время создания базы данных что-то происходит не так</A>
+</UL>
+<LI><A NAME="Using_InnoDB_tables" HREF="manual.ru.html#Using_InnoDB_tables">7.5.4  Создание  таблиц InnoDB</A>
+<UL>
+<LI><A NAME="SEC459" HREF="manual.ru.html#SEC459">7.5.4.1  Преобразование таблиц MyISAM в формат InnoDB</A>
+<LI><A NAME="SEC460" HREF="manual.ru.html#SEC460">7.5.4.2  Ограничения внешнего ключа</A>
+</UL>
+<LI><A NAME="Adding_and_removing" HREF="manual.ru.html#Adding_and_removing">7.5.5  Добавление и удаление файлов данных и журналов InnoDB</A>
+<LI><A NAME="Backing_up" HREF="manual.ru.html#Backing_up">7.5.6  Создание резервных копий и восстановление баз данных InnoDB</A>
+<UL>
+<LI><A NAME="InnoDB_checkpoints" HREF="manual.ru.html#InnoDB_checkpoints">7.5.6.1  Контрольные точки</A>
+</UL>
+<LI><A NAME="Moving" HREF="manual.ru.html#Moving">7.5.7  Перенесение базы данных InnoDB на другой компьютер</A>
+<LI><A NAME="InnoDB_transaction_model" HREF="manual.ru.html#InnoDB_transaction_model">7.5.8  Транзакционная  модель InnoDB</A>
+<UL>
+<LI><A NAME="InnoDB_consistent_read" HREF="manual.ru.html#InnoDB_consistent_read">7.5.8.1  Согласованное чтение</A>
+<LI><A NAME="InnoDB_locking_reads" HREF="manual.ru.html#InnoDB_locking_reads">7.5.8.2  Чтение с блокировкой</A>
+<LI><A NAME="InnoDB_Next-key_locking" HREF="manual.ru.html#InnoDB_Next-key_locking">7.5.8.3  Блокировка следующего ключа: устранение проблемы с фантомом</A>
+<LI><A NAME="InnoDB_Locks_set" HREF="manual.ru.html#InnoDB_Locks_set">7.5.8.4  Блокировка, осуществляемая различными операторами SQL в InnoDB</A>
+<LI><A NAME="InnoDB_Deadlock_detection" HREF="manual.ru.html#InnoDB_Deadlock_detection">7.5.8.5  Обнаружение и откат взаимоблокировки (deadlock)</A>
+<LI><A NAME="InnoDB_Consistent_read_example" HREF="manual.ru.html#InnoDB_Consistent_read_example">7.5.8.6  Пример работы согласованного чтения в InnoDB</A>
+<LI><A NAME="Innodb_deadlocks" HREF="manual.ru.html#Innodb_deadlocks">7.5.8.7  Каким образом избежать взаимоблокировок (deadlock)?</A>
+<LI><A NAME="Innodb_tuning" HREF="manual.ru.html#Innodb_tuning">7.5.8.8  Рекомендации по увеличению производительности</A>
+<LI><A NAME="Innodb_Monitor" HREF="manual.ru.html#Innodb_Monitor">7.5.8.9  InnoDB Monitor</A>
+</UL>
+<LI><A NAME="Implementation" HREF="manual.ru.html#Implementation">7.5.9  Реализация многовариантности</A>
+<LI><A NAME="Table_and_index" HREF="manual.ru.html#Table_and_index">7.5.10  Структуры таблиц и индексов</A>
+<UL>
+<LI><A NAME="InnoDB_physical_structure" HREF="manual.ru.html#InnoDB_physical_structure">7.5.10.1  Физическая структура индекса</A>
+<LI><A NAME="InnoDB_Insert_buffering" HREF="manual.ru.html#InnoDB_Insert_buffering">7.5.10.2  Буферизация вставок</A>
+<LI><A NAME="InnoDB_Adaptive_hash" HREF="manual.ru.html#InnoDB_Adaptive_hash">7.5.10.3  Адаптивный хешированный индекс</A>
+<LI><A NAME="InnoDB_Physical_record" HREF="manual.ru.html#InnoDB_Physical_record">7.5.10.4  Физическая структура записи</A>
+<LI><A NAME="SEC481" HREF="manual.ru.html#SEC481">7.5.10.5  Как работают автоинкрементные столбцы в InnoDB</A>
+</UL>
+<LI><A NAME="File_space_management" HREF="manual.ru.html#File_space_management">7.5.11  Управление файловым пространством и дисковый ввод/вывод</A>
+<UL>
+<LI><A NAME="InnoDB_Disk_I_O" HREF="manual.ru.html#InnoDB_Disk_I_O">7.5.11.1  Дисковый ввод/вывод</A>
+<LI><A NAME="InnoDB_File_space" HREF="manual.ru.html#InnoDB_File_space">7.5.11.2  Управление файловым пространством</A>
+<LI><A NAME="InnoDB_File_Defragmenting" HREF="manual.ru.html#InnoDB_File_Defragmenting">7.5.11.3  Дефрагментация  таблицы</A>
+</UL>
+<LI><A NAME="InnoDB_Error_handling" HREF="manual.ru.html#InnoDB_Error_handling">7.5.12  Обработка ошибок</A>
+<LI><A NAME="InnoDB_restrictions" HREF="manual.ru.html#InnoDB_restrictions">7.5.13  Ограничения для таблиц InnoDB</A>
+<LI><A NAME="InnoDB_change_history" HREF="manual.ru.html#InnoDB_change_history">7.5.14  История изменений InnoDB</A>
+<LI><A NAME="InnoDB_contact_information" HREF="manual.ru.html#InnoDB_contact_information">7.5.15  Контактная информация для получения данных по InnoDB</A>
+</UL>
+<LI><A NAME="BDB" HREF="manual.ru.html#BDB">7.6  Таблицы <code>BDB</code> или BerkeleyDB</A>
+<UL>
+<LI><A NAME="BDB_overview" HREF="manual.ru.html#BDB_overview">7.6.1  Обзор таблиц <code>BDB</code></A>
+<LI><A NAME="BDB_install" HREF="manual.ru.html#BDB_install">7.6.2  Установка <code>BDB</code></A>
+<LI><A NAME="BDB_start" HREF="manual.ru.html#BDB_start">7.6.3  Параметры запуска <code>BDB</code></A>
+<LI><A NAME="BDB_characteristics" HREF="manual.ru.html#BDB_characteristics">7.6.4  Характеристики таблиц <code>BDB</code></A>
+<LI><A NAME="BDB_TODO" HREF="manual.ru.html#BDB_TODO">7.6.5  Что нам нужно исправить в <code>BDB</code> в ближайшем будущем:</A>
+<LI><A NAME="BDB_portability" HREF="manual.ru.html#BDB_portability">7.6.6  Операционные системы, поддерживаемые <code>BDB</code></A>
+<LI><A NAME="BDB_restrictions" HREF="manual.ru.html#BDB_restrictions">7.6.7  Ограничения таблиц <code>BDB</code></A>
+<LI><A NAME="BDB_errors" HREF="manual.ru.html#BDB_errors">7.6.8  Ошибки, которые могут возникнуть при использовании таблиц <code>BDB</code></A>
+</UL>
+</UL>
+<LI><A NAME="Clients" HREF="manual.ru.html#Clients">8  Интерфейсы для MySQL</A>
+<UL>
+<LI><A NAME="PHP" HREF="manual.ru.html#PHP">8.1  Интерфейс PHP  API для MySQL</A>
+<UL>
+<LI><A NAME="PHP_problems" HREF="manual.ru.html#PHP_problems">8.1.1  Общие проблемы MySQL и PHP</A>
+</UL>
+<LI><A NAME="Perl" HREF="manual.ru.html#Perl">8.2  Интерфейс Perl  API для MySQL</A>
+<UL>
+<LI><A NAME="DBI_with_DBD" HREF="manual.ru.html#DBI_with_DBD">8.2.1  <code>DBI</code> с помощью <code>DBD::mysql</code></A>
+<LI><A NAME="Perl_DBI_Class" HREF="manual.ru.html#Perl_DBI_Class">8.2.2  Интерфейс <code>DBI</code></A>
+<LI><A NAME="DBI-info" HREF="manual.ru.html#DBI-info">8.2.3  Больше информации по <code>DBI</code>/<code>DBD</code></A>
+</UL>
+<LI><A NAME="ODBC" HREF="manual.ru.html#ODBC">8.3  Поддержка ODBC в MySQL</A>
+<UL>
+<LI><A NAME="Installing_MyODBC" HREF="manual.ru.html#Installing_MyODBC">8.3.1  Как установить MyODBC</A>
+<LI><A NAME="ODBC_administrator" HREF="manual.ru.html#ODBC_administrator">8.3.2  Как заполнять различные поля в Администраторе ODBC</A>
+<LI><A NAME="MyODBC_connect_parameters" HREF="manual.ru.html#MyODBC_connect_parameters">8.3.3  Параметры подключения для MyODBC</A>
+<LI><A NAME="ODBC_Problems" HREF="manual.ru.html#ODBC_Problems">8.3.4  Как сообщать о проблемах с MyODBC</A>
+<LI><A NAME="MyODBC_clients" HREF="manual.ru.html#MyODBC_clients">8.3.5  Программы, работающие с MyODBC</A>
+<LI><A NAME="ODBC_and_last_insert_id" HREF="manual.ru.html#ODBC_and_last_insert_id">8.3.6  Как получить значение столбца AUTO_INCREMENT в ODBC</A>
+<LI><A NAME="MyODBC_bug_report" HREF="manual.ru.html#MyODBC_bug_report">8.3.7  Составление отчетов о проблемах с MyODBC</A>
+</UL>
+<LI><A NAME="C" HREF="manual.ru.html#C">8.4  Интерфейс C для MySQL</A>
+<UL>
+<LI><A NAME="C_API_datatypes" HREF="manual.ru.html#C_API_datatypes">8.4.1  Типы данных C API</A>
+<LI><A NAME="C_API_function_overview" HREF="manual.ru.html#C_API_function_overview">8.4.2  Обзор функций интерфейса C</A>
+<LI><A NAME="C_API_functions" HREF="manual.ru.html#C_API_functions">8.4.3  Описание функций интерфейса C</A>
+<UL>
+<LI><A NAME="mysql_affected_rows" HREF="manual.ru.html#mysql_affected_rows">8.4.3.1  <code>mysql_affected_rows()</code></A>
+<LI><A NAME="mysql_change_user" HREF="manual.ru.html#mysql_change_user">8.4.3.2  <code>mysql_change_user()</code></A>
+<LI><A NAME="mysql_character_set_name" HREF="manual.ru.html#mysql_character_set_name">8.4.3.3  <code>mysql_character_set_name()</code></A>
+<LI><A NAME="mysql_close" HREF="manual.ru.html#mysql_close">8.4.3.4  <code>mysql_close()</code></A>
+<LI><A NAME="mysql_connect" HREF="manual.ru.html#mysql_connect">8.4.3.5  <code>mysql_connect()</code></A>
+<LI><A NAME="mysql_create_db" HREF="manual.ru.html#mysql_create_db">8.4.3.6  <code>mysql_create_db()</code></A>
+<LI><A NAME="mysql_data_seek" HREF="manual.ru.html#mysql_data_seek">8.4.3.7  <code>mysql_data_seek()</code></A>
+<LI><A NAME="mysql_debug" HREF="manual.ru.html#mysql_debug">8.4.3.8  <code>mysql_debug()</code></A>
+<LI><A NAME="mysql_drop_db" HREF="manual.ru.html#mysql_drop_db">8.4.3.9  <code>mysql_drop_db()</code></A>
+<LI><A NAME="mysql_dump_debug_info" HREF="manual.ru.html#mysql_dump_debug_info">8.4.3.10  <code>mysql_dump_debug_info()</code></A>
+<LI><A NAME="mysql_eof" HREF="manual.ru.html#mysql_eof">8.4.3.11  <code>mysql_eof()</code></A>
+<LI><A NAME="mysql_errno" HREF="manual.ru.html#mysql_errno">8.4.3.12  <code>mysql_errno()</code></A>
+<LI><A NAME="mysql_error" HREF="manual.ru.html#mysql_error">8.4.3.13  <code>mysql_error()</code></A>
+<LI><A NAME="mysql_escape_string" HREF="manual.ru.html#mysql_escape_string">8.4.3.14  <code>mysql_escape_string()</code></A>
+<LI><A NAME="mysql_fetch_field" HREF="manual.ru.html#mysql_fetch_field">8.4.3.15  <code>mysql_fetch_field()</code></A>
+<LI><A NAME="mysql_fetch_field_direct" HREF="manual.ru.html#mysql_fetch_field_direct">8.4.3.16  <code>mysql_fetch_field_direct()</code></A>
+<LI><A NAME="mysql_fetch_fields" HREF="manual.ru.html#mysql_fetch_fields">8.4.3.17  <code>mysql_fetch_fields()</code></A>
+<LI><A NAME="mysql_fetch_lengths" HREF="manual.ru.html#mysql_fetch_lengths">8.4.3.18  <code>mysql_fetch_lengths()</code></A>
+<LI><A NAME="mysql_fetch_row" HREF="manual.ru.html#mysql_fetch_row">8.4.3.19  <code>mysql_fetch_row()</code></A>
+<LI><A NAME="mysql_field_count" HREF="manual.ru.html#mysql_field_count">8.4.3.20  <code>mysql_field_count()</code></A>
+<LI><A NAME="mysql_field_seek" HREF="manual.ru.html#mysql_field_seek">8.4.3.21  <code>mysql_field_seek()</code></A>
+<LI><A NAME="mysql_field_tell" HREF="manual.ru.html#mysql_field_tell">8.4.3.22  <code>mysql_field_tell()</code></A>
+<LI><A NAME="mysql_free_result" HREF="manual.ru.html#mysql_free_result">8.4.3.23  <code>mysql_free_result()</code></A>
+<LI><A NAME="mysql_get_client_info" HREF="manual.ru.html#mysql_get_client_info">8.4.3.24  <code>mysql_get_client_info()</code></A>
+<LI><A NAME="mysql_get_server_version" HREF="manual.ru.html#mysql_get_server_version">8.4.3.25  <code>mysql_get_server_version()</code></A>
+<LI><A NAME="mysql_get_host_info" HREF="manual.ru.html#mysql_get_host_info">8.4.3.26  <code>mysql_get_host_info()</code></A>
+<LI><A NAME="mysql_get_proto_info" HREF="manual.ru.html#mysql_get_proto_info">8.4.3.27  <code>mysql_get_proto_info()</code></A>
+<LI><A NAME="mysql_get_server_info" HREF="manual.ru.html#mysql_get_server_info">8.4.3.28  <code>mysql_get_server_info()</code></A>
+<LI><A NAME="mysql_info" HREF="manual.ru.html#mysql_info">8.4.3.29  <code>mysql_info()</code></A>
+<LI><A NAME="mysql_init" HREF="manual.ru.html#mysql_init">8.4.3.30  <code>mysql_init()</code></A>
+<LI><A NAME="mysql_insert_id" HREF="manual.ru.html#mysql_insert_id">8.4.3.31  <code>mysql_insert_id()</code></A>
+<LI><A NAME="mysql_kill" HREF="manual.ru.html#mysql_kill">8.4.3.32  <code>mysql_kill()</code></A>
+<LI><A NAME="mysql_list_dbs" HREF="manual.ru.html#mysql_list_dbs">8.4.3.33  <code>mysql_list_dbs()</code></A>
+<LI><A NAME="mysql_list_fields" HREF="manual.ru.html#mysql_list_fields">8.4.3.34  <code>mysql_list_fields()</code></A>
+<LI><A NAME="mysql_list_processes" HREF="manual.ru.html#mysql_list_processes">8.4.3.35  <code>mysql_list_processes()</code></A>
+<LI><A NAME="mysql_list_tables" HREF="manual.ru.html#mysql_list_tables">8.4.3.36  <code>mysql_list_tables()</code></A>
+<LI><A NAME="mysql_num_fields" HREF="manual.ru.html#mysql_num_fields">8.4.3.37  <code>mysql_num_fields()</code></A>
+<LI><A NAME="mysql_num_rows" HREF="manual.ru.html#mysql_num_rows">8.4.3.38  <code>mysql_num_rows()</code></A>
+<LI><A NAME="mysql_options" HREF="manual.ru.html#mysql_options">8.4.3.39  <code>mysql_options()</code></A>
+<LI><A NAME="mysql_ping" HREF="manual.ru.html#mysql_ping">8.4.3.40  <code>mysql_ping()</code></A>
+<LI><A NAME="mysql_query" HREF="manual.ru.html#mysql_query">8.4.3.41  <code>mysql_query()</code></A>
+<LI><A NAME="mysql_real_connect" HREF="manual.ru.html#mysql_real_connect">8.4.3.42  <code>mysql_real_connect()</code></A>
+<LI><A NAME="mysql_real_escape_string" HREF="manual.ru.html#mysql_real_escape_string">8.4.3.43  <code>mysql_real_escape_string()</code></A>
+<LI><A NAME="mysql_real_query" HREF="manual.ru.html#mysql_real_query">8.4.3.44  <code>mysql_real_query()</code></A>
+<LI><A NAME="mysql_reload" HREF="manual.ru.html#mysql_reload">8.4.3.45  <code>mysql_reload()</code></A>
+<LI><A NAME="mysql_row_seek" HREF="manual.ru.html#mysql_row_seek">8.4.3.46  <code>mysql_row_seek()</code></A>
+<LI><A NAME="mysql_row_tell" HREF="manual.ru.html#mysql_row_tell">8.4.3.47  <code>mysql_row_tell()</code></A>
+<LI><A NAME="mysql_select_db" HREF="manual.ru.html#mysql_select_db">8.4.3.48  <code>mysql_select_db()</code></A>
+<LI><A NAME="mysql_shutdown" HREF="manual.ru.html#mysql_shutdown">8.4.3.49  <code>mysql_shutdown()</code></A>
+<LI><A NAME="mysql_stat" HREF="manual.ru.html#mysql_stat">8.4.3.50  <code>mysql_stat()</code></A>
+<LI><A NAME="mysql_store_result" HREF="manual.ru.html#mysql_store_result">8.4.3.51  <code>mysql_store_result()</code></A>
+<LI><A NAME="mysql_thread_id" HREF="manual.ru.html#mysql_thread_id">8.4.3.52  <code>mysql_thread_id()</code></A>
+<LI><A NAME="mysql_use_result" HREF="manual.ru.html#mysql_use_result">8.4.3.53  <code>mysql_use_result()</code></A>
+</UL>
+<LI><A NAME="C_Thread_functions" HREF="manual.ru.html#C_Thread_functions">8.4.4  Описания функций C, связанных с потоками</A>
+<UL>
+<LI><A NAME="my_init" HREF="manual.ru.html#my_init">8.4.4.1  <code>my_init()</code></A>
+<LI><A NAME="mysql_thread_init" HREF="manual.ru.html#mysql_thread_init">8.4.4.2  <code>mysql_thread_init()</code></A>
+<LI><A NAME="mysql_thread_end" HREF="manual.ru.html#mysql_thread_end">8.4.4.3  <code>mysql_thread_end()</code></A>
+<LI><A NAME="mysql_thread_safe" HREF="manual.ru.html#mysql_thread_safe">8.4.4.4  <code>mysql_thread_safe()</code></A>
+</UL>
+<LI><A NAME="C_Embedded_Server_func" HREF="manual.ru.html#C_Embedded_Server_func">8.4.5  Описания функций C, доступных во встраиваемом сервере</A>
+<UL>
+<LI><A NAME="mysql_server_init" HREF="manual.ru.html#mysql_server_init">8.4.5.1  <code>mysql_server_init()</code></A>
+<LI><A NAME="mysql_server_end" HREF="manual.ru.html#mysql_server_end">8.4.5.2  <code>mysql_server_end()</code></A>
+</UL>
+<LI><A NAME="C_API_problems" HREF="manual.ru.html#C_API_problems">8.4.6  Основные вопросы и проблемы в использовании интерфейса C</A>
+<UL>
+<LI><A NAME="NULL_mysql_store_result" HREF="manual.ru.html#NULL_mysql_store_result">8.4.6.1  Почему после успешных возвратов функции <code>mysql_query()</code> функция <code>mysql_store_result()</code> иногда возвращает <code>NULL</code>?</A>
+<LI><A NAME="Query_results" HREF="manual.ru.html#Query_results">8.4.6.2  Какие результаты можно получить из запроса?</A>
+<LI><A NAME="Getting_unique_ID" HREF="manual.ru.html#Getting_unique_ID">8.4.6.3  Как получить уникальный идентификатор для последней внесенной строки?</A>
+<LI><A NAME="C_API_linking_problems" HREF="manual.ru.html#C_API_linking_problems">8.4.6.4  Проблемы линкования с интерфейсом C</A>
+</UL>
+<LI><A NAME="Building_clients" HREF="manual.ru.html#Building_clients">8.4.7  Сборка клиентских программ</A>
+<LI><A NAME="Threaded_clients" HREF="manual.ru.html#Threaded_clients">8.4.8  Как создать клиентскую программу с потоками</A>
+<LI><A NAME="libmysqld" HREF="manual.ru.html#libmysqld">8.4.9  libmysqld, встраиваемая библиотека сервера MySQL</A>
+<UL>
+<LI><A NAME="libmysqld_overview" HREF="manual.ru.html#libmysqld_overview">8.4.9.1  Обзор библиотеки встраиваемого сервера MySQL</A>
+<LI><A NAME="libmysqld_compiling" HREF="manual.ru.html#libmysqld_compiling">8.4.9.2  Компиляция программ с libmysqld</A>
+<LI><A NAME="libmysqld_restrictions" HREF="manual.ru.html#libmysqld_restrictions">8.4.9.3  Ограничения при использовании встраиваемого сервера MySQL</A>
+<LI><A NAME="libmysqld_options" HREF="manual.ru.html#libmysqld_options">8.4.9.4  Использование файлов опций с встраиваемым сервером</A>
+<LI><A NAME="libmysqld_TODO" HREF="manual.ru.html#libmysqld_TODO">8.4.9.5  Что осталось сделать по встраиваемомуому серверу (TODO)</A>
+<LI><A NAME="libmysqld_example" HREF="manual.ru.html#libmysqld_example">8.4.9.6  Пример простого встраиваемого сервера</A>
+<LI><A NAME="libmysqld_licensing" HREF="manual.ru.html#libmysqld_licensing">8.4.9.7  Лицензирование  встраиваемого  сервера</A>
+</UL>
+</UL>
+<LI><A NAME="Cplusplus" HREF="manual.ru.html#Cplusplus">8.5  Интерфейсы C++</A>
+<UL>
+<LI><A NAME="Borland_C++" HREF="manual.ru.html#Borland_C++">8.5.1  Интерфейс Borland C++</A>
+</UL>
+<LI><A NAME="Java" HREF="manual.ru.html#Java">8.6  Взаимодействие MySQL и Java (JDBC)</A>
+<LI><A NAME="Python" HREF="manual.ru.html#Python">8.7  Интерфейсы Python API для MySQL</A>
+<LI><A NAME="Tcl" HREF="manual.ru.html#Tcl">8.8  Интерфейсы Tcl API для MySQL</A>
+<LI><A NAME="Eiffel" HREF="manual.ru.html#Eiffel">8.9  Оболочка Eiffel для MySQL</A>
+</UL>
+<LI><A NAME="Extending_MySQL" HREF="manual.ru.html#Extending_MySQL">9  Расширение MySQL</A>
+<UL>
+<LI><A NAME="MySQL_internals" HREF="manual.ru.html#MySQL_internals">9.1  Внутреннее устройство MySQL</A>
+<UL>
+<LI><A NAME="MySQL_threads" HREF="manual.ru.html#MySQL_threads">9.1.1  Потоки MySQL</A>
+<LI><A NAME="MySQL_test_suite" HREF="manual.ru.html#MySQL_test_suite">9.1.2  Пакет тестирования MySQL</A>
+<UL>
+<LI><A NAME="running_mysqltest" HREF="manual.ru.html#running_mysqltest">9.1.2.1  Выполнение тестового пакета MySQL</A>
+<LI><A NAME="extending_mysqltest" HREF="manual.ru.html#extending_mysqltest">9.1.2.2  Расширение тестового пакета MySQL</A>
+<LI><A NAME="Reporting_mysqltest_bugs" HREF="manual.ru.html#Reporting_mysqltest_bugs">9.1.2.3  Отчет об ошибках в тестовом пакете MySQL</A>
+</UL>
+</UL>
+<LI><A NAME="Adding_functions" HREF="manual.ru.html#Adding_functions">9.2  Добавление новых функций в MySQL</A>
+<UL>
+<LI><A NAME="CREATE_FUNCTION" HREF="manual.ru.html#CREATE_FUNCTION">9.2.1  Синтаксис <code>CREATE FUNCTION/DROP FUNCTION</code></A>
+<LI><A NAME="Adding_UDF" HREF="manual.ru.html#Adding_UDF">9.2.2  Добавление новой определяемой пользователем функции</A>
+<UL>
+<LI><A NAME="UDF_calling" HREF="manual.ru.html#UDF_calling">9.2.2.1  Последовательность вызова UDF для простых функций</A>
+<LI><A NAME="UDF_aggr._calling" HREF="manual.ru.html#UDF_aggr._calling">9.2.2.2  Последовательность вызова UDF для агрегатных функций</A>
+<LI><A NAME="UDF_arguments" HREF="manual.ru.html#UDF_arguments">9.2.2.3  Обработка  аргументов</A>
+<LI><A NAME="UDF_return_values" HREF="manual.ru.html#UDF_return_values">9.2.2.4  Возвращаемые значения и обработка ошибок</A>
+<LI><A NAME="UDF_compiling" HREF="manual.ru.html#UDF_compiling">9.2.2.5  Компиляция и установка определяемых пользователем функций</A>
+</UL>
+<LI><A NAME="Adding_native_function" HREF="manual.ru.html#Adding_native_function">9.2.3  Добавление новых родных функции</A>
+</UL>
+<LI><A NAME="Adding_procedures" HREF="manual.ru.html#Adding_procedures">9.3  Добавление новой процедуры в MySQL</A>
+<UL>
+<LI><A NAME="procedure_analyse" HREF="manual.ru.html#procedure_analyse">9.3.1  Процедура Analyse</A>
+<LI><A NAME="Writing_a_procedure" HREF="manual.ru.html#Writing_a_procedure">9.3.2  Написание  процедуры</A>
+</UL>
+</UL>
+<LI><A NAME="Problems" HREF="manual.ru.html#Problems">A  Проблемы и распространенные ошибки</A>
+<UL>
+<LI><A NAME="What_is_crashing" HREF="manual.ru.html#What_is_crashing">A.1  Как определить, чем вызваны проблемы</A>
+<LI><A NAME="Common_errors" HREF="manual.ru.html#Common_errors">A.2  Распространенные ошибки при использовании MySQL</A>
+<UL>
+<LI><A NAME="Error_Access_denied" HREF="manual.ru.html#Error_Access_denied">A.2.1  Ошибка <code>Access denied</code></A>
+<LI><A NAME="Gone_away" HREF="manual.ru.html#Gone_away">A.2.2  Ошибка <code>MySQL server has gone away</code></A>
+<LI><A NAME="Can_not_connect_to_server" HREF="manual.ru.html#Can_not_connect_to_server">A.2.3  Ошибка <code>Can't connect to [local] MySQL server</code></A>
+<LI><A NAME="Blocked_host" HREF="manual.ru.html#Blocked_host">A.2.4  Ошибка <code>Host '...' is blocked</code></A>
+<LI><A NAME="Too_many_connections" HREF="manual.ru.html#Too_many_connections">A.2.5  Ошибка <code>Too many connections</code></A>
+<LI><A NAME="Non-transactional_tables" HREF="manual.ru.html#Non-transactional_tables">A.2.6  Ошибка <code>Some non-transactional changed tables couldn't be rolled back</code></A>
+<LI><A NAME="Out_of_memory" HREF="manual.ru.html#Out_of_memory">A.2.7  Ошибка <code>Out of memory</code></A>
+<LI><A NAME="Packet_too_large" HREF="manual.ru.html#Packet_too_large">A.2.8  Ошибка <code>Packet too large</code></A>
+<LI><A NAME="Communication_errors" HREF="manual.ru.html#Communication_errors">A.2.9  Коммуникационные ошибки / Оборванные соединения</A>
+<LI><A NAME="Full_table" HREF="manual.ru.html#Full_table">A.2.10  Ошибка <code>The table is full</code></A>
+<LI><A NAME="Cannot_create" HREF="manual.ru.html#Cannot_create">A.2.11  Ошибка <code>Can't create/write to file</code></A>
+<LI><A NAME="Commands_out_of_sync" HREF="manual.ru.html#Commands_out_of_sync">A.2.12  Ошибка в клиенте <code>Commands out of sync</code></A>
+<LI><A NAME="Ignoring_user" HREF="manual.ru.html#Ignoring_user">A.2.13  Ошибка <code>Ignoring user</code></A>
+<LI><A NAME="Cannot_find_table" HREF="manual.ru.html#Cannot_find_table">A.2.14  Ошибка <code>Table 'xxx' doesn't exist</code></A>
+<LI><A NAME="Cannot_initialize_character_set" HREF="manual.ru.html#Cannot_initialize_character_set">A.2.15  Ошибка <code>Can't initialize character set xxx</code></A>
+<LI><A NAME="Not_enough_file_handles" HREF="manual.ru.html#Not_enough_file_handles">A.2.16  Не найден файл (<code>File not found</code>)</A>
+</UL>
+<LI><A NAME="Installation_Issues" HREF="manual.ru.html#Installation_Issues">A.3  Вопросы, связанные с инсталляцией</A>
+<UL>
+<LI><A NAME="Link_errors" HREF="manual.ru.html#Link_errors">A.3.1  Проблемы при линковании с клиентской библиотекой MySQL</A>
+<LI><A NAME="Changing_MySQL_user" HREF="manual.ru.html#Changing_MySQL_user">A.3.2  Запуск MySQL от обычного пользователя</A>
+<LI><A NAME="File_permissions" HREF="manual.ru.html#File_permissions">A.3.3  Проблемы с правами доступа к файлам</A>
+</UL>
+<LI><A NAME="Administration_Issues" HREF="manual.ru.html#Administration_Issues">A.4  Вопросы, связанные с администрированием</A>
+<UL>
+<LI><A NAME="Crashing" HREF="manual.ru.html#Crashing">A.4.1  Что делать, если работа MySQL сопровождается постоянными сбоями</A>
+<LI><A NAME="Resetting_permissions" HREF="manual.ru.html#Resetting_permissions">A.4.2  Как переустановить забытый пароль пользователя <code>root</code></A>
+<LI><A NAME="Full_disk" HREF="manual.ru.html#Full_disk">A.4.3  Как MySQL реагирует на переполнение диска</A>
+<LI><A NAME="Temporary_files" HREF="manual.ru.html#Temporary_files">A.4.4  Где MySQL хранит временные файлы</A>
+<LI><A NAME="Problems_with_mysql.sock" HREF="manual.ru.html#Problems_with_mysql.sock">A.4.5  Как защитить или изменить сокет-файл MySQL <tt>`/tmp/mysql.sock'</tt></A>
+<LI><A NAME="Timezone_problems" HREF="manual.ru.html#Timezone_problems">A.4.6  Проблемы с часовыми поясами</A>
+</UL>
+<LI><A NAME="Query_Issues" HREF="manual.ru.html#Query_Issues">A.5  Проблемы, относящиеся к запросам</A>
+<UL>
+<LI><A NAME="Case_sensitivity" HREF="manual.ru.html#Case_sensitivity">A.5.1  Чувствительность к регистру при поиске</A>
+<LI><A NAME="Using_DATE" HREF="manual.ru.html#Using_DATE">A.5.2  Проблемы с использованием столбцов типа <code>DATE</code></A>
+<LI><A NAME="Problems_with_NULL" HREF="manual.ru.html#Problems_with_NULL">A.5.3  Проблемы со значением <code>NULL</code></A>
+<LI><A NAME="Problems_with_alias" HREF="manual.ru.html#Problems_with_alias">A.5.4  Проблемы  с <code>alias</code></A>
+<LI><A NAME="Deleting_from_related_tables" HREF="manual.ru.html#Deleting_from_related_tables">A.5.5  Удаление строк из взаимосвязанных таблиц</A>
+<LI><A NAME="No_matching_rows" HREF="manual.ru.html#No_matching_rows">A.5.6  Решение проблем с отсутствием строк, удовлетворяющих условиям поиска</A>
+<LI><A NAME="Problems_with_float" HREF="manual.ru.html#Problems_with_float">A.5.7  Проблемы со сравнением чисел с плавающей точкой</A>
+</UL>
+<LI><A NAME="Table_Definition_Issues" HREF="manual.ru.html#Table_Definition_Issues">A.6  Вопросы, связанные с определением таблиц</A>
+<UL>
+<LI><A NAME="ALTER_TABLE_problems" HREF="manual.ru.html#ALTER_TABLE_problems">A.6.1  Проблемы с <code>ALTER TABLE</code></A>
+<LI><A NAME="Change_column_order" HREF="manual.ru.html#Change_column_order">A.6.2  Как изменить порядок столбцов в таблице</A>
+<LI><A NAME="Temporary_table_problems" HREF="manual.ru.html#Temporary_table_problems">A.6.3  Проблемы, относящиеся к временным (<code>TEMPORARY</code>) таблицам</A>
+</UL>
+</UL>
+<LI><A NAME="Credits" HREF="manual.ru.html#Credits">B  Благодарности</A>
+<UL>
+<LI><A NAME="Developers" HREF="manual.ru.html#Developers">B.1  Разработчики MySQL AB</A>
+<LI><A NAME="Contributors" HREF="manual.ru.html#Contributors">B.2  Наши помощники, которые сделали вклад в развитие MySQL</A>
+<LI><A NAME="Supporters" HREF="manual.ru.html#Supporters">B.3  Спонсоры MySQL</A>
+</UL>
+<LI><A NAME="News" HREF="manual.ru.html#News">C  История изменений и обновлений MySQL</A>
+<UL>
+<LI><A NAME="News-4.1.x" HREF="manual.ru.html#News-4.1.x">C.1  Изменения в версии 4.1.x (Alpha)</A>
+<UL>
+<LI><A NAME="News-4.1.0" HREF="manual.ru.html#News-4.1.0">C.1.1  Изменения в версии 4.1.0</A>
+</UL>
+<LI><A NAME="News-4.0.x" HREF="manual.ru.html#News-4.0.x">C.2  Изменения в версии 4.0.x (В разработке; Альфа)</A>
+<UL>
+<LI><A NAME="News-4.0.2" HREF="manual.ru.html#News-4.0.2">C.2.1  Изменения в версии 4.0.2</A>
+<LI><A NAME="News-4.0.1" HREF="manual.ru.html#News-4.0.1">C.2.2  Изменения в версии 4.0.1 (23 Дек 2001)</A>
+<LI><A NAME="News-4.0.0" HREF="manual.ru.html#News-4.0.0">C.2.3  Изменения в версии 4.0.0 (Окт 2001: Альфа)</A>
+</UL>
+<LI><A NAME="News-3.23.x" HREF="manual.ru.html#News-3.23.x">C.3  Изменения в версии 3.23.x  (Стабильная)</A>
+<UL>
+<LI><A NAME="News-3.23.52" HREF="manual.ru.html#News-3.23.52">C.3.1  Изменения в версии 3.23.52</A>
+<LI><A NAME="News-3.23.51" HREF="manual.ru.html#News-3.23.51">C.3.2  Изменения в версии 3.23.51 (31 Май 2002)</A>
+<LI><A NAME="News-3.23.50" HREF="manual.ru.html#News-3.23.50">C.3.3  Изменения в версии 3.23.50 (21 Апр 2002)</A>
+<LI><A NAME="News-3.23.49" HREF="manual.ru.html#News-3.23.49">C.3.4  Изменения в версии 3.23.49</A>
+<LI><A NAME="News-3.23.48" HREF="manual.ru.html#News-3.23.48">C.3.5  Изменения в версии 3.23.48 (07 Фев 2002)</A>
+<LI><A NAME="News-3.23.47" HREF="manual.ru.html#News-3.23.47">C.3.6  Изменения в версии 3.23.47 (27 Дек 2001)</A>
+<LI><A NAME="News-3.23.46" HREF="manual.ru.html#News-3.23.46">C.3.7  Изменения в версии 3.23.46 (29 Ноя 2001)</A>
+<LI><A NAME="News-3.23.45" HREF="manual.ru.html#News-3.23.45">C.3.8  Изменения в версии 3.23.45 (22 Ноя 2001)</A>
+<LI><A NAME="News-3.23.44" HREF="manual.ru.html#News-3.23.44">C.3.9  Изменения в версии 3.23.44 (31 Окт 2001)</A>
+<LI><A NAME="News-3.23.43" HREF="manual.ru.html#News-3.23.43">C.3.10  Изменения в версии 3.23.43</A>
+<LI><A NAME="News-3.23.42" HREF="manual.ru.html#News-3.23.42">C.3.11  Изменения в версии 3.23.42 (08 Сен 2001)</A>
+<LI><A NAME="News-3.23.41" HREF="manual.ru.html#News-3.23.41">C.3.12  Изменения в версии 3.23.41 (11 Авг 2001)</A>
+<LI><A NAME="News-3.23.40" HREF="manual.ru.html#News-3.23.40">C.3.13  Изменения в версии 3.23.40</A>
+<LI><A NAME="News-3.23.39" HREF="manual.ru.html#News-3.23.39">C.3.14  Изменения в версии 3.23.39 (12 Июн 2001)</A>
+<LI><A NAME="News-3.23.38" HREF="manual.ru.html#News-3.23.38">C.3.15  Изменения в версии 3.23.38 (09 Май 2001)</A>
+<LI><A NAME="News-3.23.37" HREF="manual.ru.html#News-3.23.37">C.3.16  Изменения в версии 3.23.37 (17 Апр 2001)</A>
+<LI><A NAME="News-3.23.36" HREF="manual.ru.html#News-3.23.36">C.3.17  Изменения в версии 3.23.36 (27 Мар 2001)</A>
+<LI><A NAME="News-3.23.35" HREF="manual.ru.html#News-3.23.35">C.3.18  Изменения в версии 3.23.35 (15 Мар 2001)</A>
+<LI><A NAME="News-3.23.34a" HREF="manual.ru.html#News-3.23.34a">C.3.19  Изменения в версии 3.23.34a</A>
+<LI><A NAME="News-3.23.34" HREF="manual.ru.html#News-3.23.34">C.3.20  Изменения в версии 3.23.34 (10 Мар 2001)</A>
+<LI><A NAME="News-3.23.33" HREF="manual.ru.html#News-3.23.33">C.3.21  Изменения в версии 3.23.33 (09 Фев 2001)</A>
+<LI><A NAME="News-3.23.32" HREF="manual.ru.html#News-3.23.32">C.3.22  Изменения в версии 3.23.32 (22 Янв 2001: Стабильная)</A>
+<LI><A NAME="News-3.23.31" HREF="manual.ru.html#News-3.23.31">C.3.23  Изменения в версии 3.23.31 (17 Янв 2001)</A>
+<LI><A NAME="News-3.23.30" HREF="manual.ru.html#News-3.23.30">C.3.24  Изменения в версии 3.23.30 (04 Янв 2001)</A>
+<LI><A NAME="News-3.23.29" HREF="manual.ru.html#News-3.23.29">C.3.25  Изменения в версии 3.23.29 (16 Дек 2000)</A>
+<LI><A NAME="News-3.23.28" HREF="manual.ru.html#News-3.23.28">C.3.26  Изменения в версии 3.23.28 (22 Ноя 2000: Гамма)</A>
+<LI><A NAME="News-3.23.27" HREF="manual.ru.html#News-3.23.27">C.3.27  Изменения в версии 3.23.27 (24 Окт 2000)</A>
+<LI><A NAME="News-3.23.26" HREF="manual.ru.html#News-3.23.26">C.3.28  Изменения в версии 3.23.26</A>
+<LI><A NAME="News-3.23.25" HREF="manual.ru.html#News-3.23.25">C.3.29  Изменения в версии 3.23.25</A>
+<LI><A NAME="News-3.23.24" HREF="manual.ru.html#News-3.23.24">C.3.30  Изменения в версии 3.23.24 (08 Сен 2000)</A>
+<LI><A NAME="News-3.23.23" HREF="manual.ru.html#News-3.23.23">C.3.31  Изменения в версии 3.23.23</A>
+<LI><A NAME="News-3.23.22" HREF="manual.ru.html#News-3.23.22">C.3.32  Изменения в версии 3.23.22 (31 Июл 2000)</A>
+<LI><A NAME="News-3.23.21" HREF="manual.ru.html#News-3.23.21">C.3.33  Изменения в версии 3.23.21</A>
+<LI><A NAME="News-3.23.20" HREF="manual.ru.html#News-3.23.20">C.3.34  Изменения в версии 3.23.20</A>
+<LI><A NAME="News-3.23.19" HREF="manual.ru.html#News-3.23.19">C.3.35  Изменения в версии 3.23.19</A>
+<LI><A NAME="News-3.23.18" HREF="manual.ru.html#News-3.23.18">C.3.36  Изменения в версии 3.23.18</A>
+<LI><A NAME="News-3.23.17" HREF="manual.ru.html#News-3.23.17">C.3.37  Изменения в версии 3.23.17</A>
+<LI><A NAME="News-3.23.16" HREF="manual.ru.html#News-3.23.16">C.3.38  Изменения в версии 3.23.16</A>
+<LI><A NAME="News-3.23.15" HREF="manual.ru.html#News-3.23.15">C.3.39  Изменения в версии 3.23.15 (Май 2000: Бета)</A>
+<LI><A NAME="News-3.23.14" HREF="manual.ru.html#News-3.23.14">C.3.40  Изменения в версии 3.23.14</A>
+<LI><A NAME="News-3.23.13" HREF="manual.ru.html#News-3.23.13">C.3.41  Изменения в версии 3.23.13</A>
+<LI><A NAME="News-3.23.12" HREF="manual.ru.html#News-3.23.12">C.3.42  Изменения в версии 3.23.12</A>
+<LI><A NAME="News-3.23.11" HREF="manual.ru.html#News-3.23.11">C.3.43  Изменения в версии 3.23.11</A>
+<LI><A NAME="News-3.23.10" HREF="manual.ru.html#News-3.23.10">C.3.44  Изменения в версии 3.23.10</A>
+<LI><A NAME="News-3.23.9" HREF="manual.ru.html#News-3.23.9">C.3.45  Изменения в версии 3.23.9</A>
+<LI><A NAME="News-3.23.8" HREF="manual.ru.html#News-3.23.8">C.3.46  Изменения в версии 3.23.8</A>
+<LI><A NAME="News-3.23.7" HREF="manual.ru.html#News-3.23.7">C.3.47  Изменения в версии 3.23.7</A>
+<LI><A NAME="News-3.23.6" HREF="manual.ru.html#News-3.23.6">C.3.48  Изменения в версии 3.23.6</A>
+<LI><A NAME="News-3.23.5" HREF="manual.ru.html#News-3.23.5">C.3.49  Изменения в версии 3.23.5</A>
+<LI><A NAME="News-3.23.4" HREF="manual.ru.html#News-3.23.4">C.3.50  Изменения в версии 3.23.4</A>
+<LI><A NAME="News-3.23.3" HREF="manual.ru.html#News-3.23.3">C.3.51  Изменения в версии 3.23.3</A>
+<LI><A NAME="News-3.23.2" HREF="manual.ru.html#News-3.23.2">C.3.52  Изменения в версии 3.23.2</A>
+<LI><A NAME="News-3.23.1" HREF="manual.ru.html#News-3.23.1">C.3.53  Изменения в версии 3.23.1</A>
+<LI><A NAME="News-3.23.0" HREF="manual.ru.html#News-3.23.0">C.3.54  Изменения в версии 3.23.0 (Сен 1999: Альфа)</A>
+</UL>
+<LI><A NAME="News-3.22.x" HREF="manual.ru.html#News-3.22.x">C.4  Изменения в версии 3.22.x (Старая; все еще поддерживается)</A>
+<UL>
+<LI><A NAME="News-3.22.35" HREF="manual.ru.html#News-3.22.35">C.4.1  Изменения в версии 3.22.35</A>
+<LI><A NAME="News-3.22.34" HREF="manual.ru.html#News-3.22.34">C.4.2  Изменения в версии 3.22.34</A>
+<LI><A NAME="News-3.22.33" HREF="manual.ru.html#News-3.22.33">C.4.3  Изменения в версии 3.22.33</A>
+<LI><A NAME="News-3.22.32" HREF="manual.ru.html#News-3.22.32">C.4.4  Изменения в версии 3.22.32</A>
+<LI><A NAME="News-3.22.31" HREF="manual.ru.html#News-3.22.31">C.4.5  Изменения в версии 3.22.31</A>
+<LI><A NAME="News-3.22.30" HREF="manual.ru.html#News-3.22.30">C.4.6  Изменения в версии 3.22.30</A>
+<LI><A NAME="News-3.22.29" HREF="manual.ru.html#News-3.22.29">C.4.7  Изменения в версии 3.22.29</A>
+<LI><A NAME="News-3.22.28" HREF="manual.ru.html#News-3.22.28">C.4.8  Изменения в версии 3.22.28</A>
+<LI><A NAME="News-3.22.27" HREF="manual.ru.html#News-3.22.27">C.4.9  Изменения в версии 3.22.27</A>
+<LI><A NAME="News-3.22.26" HREF="manual.ru.html#News-3.22.26">C.4.10  Изменения в версии 3.22.26</A>
+<LI><A NAME="News-3.22.25" HREF="manual.ru.html#News-3.22.25">C.4.11  Изменения в версии 3.22.25</A>
+<LI><A NAME="News-3.22.24" HREF="manual.ru.html#News-3.22.24">C.4.12  Изменения в версии 3.22.24</A>
+<LI><A NAME="News-3.22.23" HREF="manual.ru.html#News-3.22.23">C.4.13  Изменения в версии 3.22.23</A>
+<LI><A NAME="News-3.22.22" HREF="manual.ru.html#News-3.22.22">C.4.14  Изменения в версии 3.22.22</A>
+<LI><A NAME="News-3.22.21" HREF="manual.ru.html#News-3.22.21">C.4.15  Изменения в версии 3.22.21</A>
+<LI><A NAME="News-3.22.20" HREF="manual.ru.html#News-3.22.20">C.4.16  Изменения в версии 3.22.20</A>
+<LI><A NAME="News-3.22.19" HREF="manual.ru.html#News-3.22.19">C.4.17  Изменения в версии 3.22.19 (Мар 1999: Стабильная)</A>
+<LI><A NAME="News-3.22.18" HREF="manual.ru.html#News-3.22.18">C.4.18  Изменения в версии 3.22.18</A>
+<LI><A NAME="News-3.22.17" HREF="manual.ru.html#News-3.22.17">C.4.19  Изменения в версии 3.22.17</A>
+<LI><A NAME="News-3.22.16" HREF="manual.ru.html#News-3.22.16">C.4.20  Изменения в версии 3.22.16 (Фев 1999: Гамма)</A>
+<LI><A NAME="News-3.22.15" HREF="manual.ru.html#News-3.22.15">C.4.21  Изменения в версии 3.22.15</A>
+<LI><A NAME="News-3.22.14" HREF="manual.ru.html#News-3.22.14">C.4.22  Изменения в версии 3.22.14</A>
+<LI><A NAME="News-3.22.13" HREF="manual.ru.html#News-3.22.13">C.4.23  Изменения в версии 3.22.13</A>
+<LI><A NAME="News-3.22.12" HREF="manual.ru.html#News-3.22.12">C.4.24  Изменения в версии 3.22.12</A>
+<LI><A NAME="News-3.22.11" HREF="manual.ru.html#News-3.22.11">C.4.25  Изменения в версии 3.22.11</A>
+<LI><A NAME="News-3.22.10" HREF="manual.ru.html#News-3.22.10">C.4.26  Изменения в версии 3.22.10</A>
+<LI><A NAME="News-3.22.9" HREF="manual.ru.html#News-3.22.9">C.4.27  Изменения в версии 3.22.9</A>
+<LI><A NAME="News-3.22.8" HREF="manual.ru.html#News-3.22.8">C.4.28  Изменения в версии 3.22.8</A>
+<LI><A NAME="News-3.22.7" HREF="manual.ru.html#News-3.22.7">C.4.29  Изменения в версии 3.22.7 (Сен 1998: Бета)</A>
+<LI><A NAME="News-3.22.6" HREF="manual.ru.html#News-3.22.6">C.4.30  Изменения в версии 3.22.6</A>
+<LI><A NAME="News-3.22.5" HREF="manual.ru.html#News-3.22.5">C.4.31  Изменения в версии 3.22.5</A>
+<LI><A NAME="News-3.22.4" HREF="manual.ru.html#News-3.22.4">C.4.32  Изменения в версии 3.22.4</A>
+<LI><A NAME="News-3.22.3" HREF="manual.ru.html#News-3.22.3">C.4.33  Изменения в версии 3.22.3</A>
+<LI><A NAME="News-3.22.2" HREF="manual.ru.html#News-3.22.2">C.4.34  Изменения в версии 3.22.2</A>
+<LI><A NAME="News-3.22.1" HREF="manual.ru.html#News-3.22.1">C.4.35  Изменения в версии 3.22.1 (Июн 1998: Альфа)</A>
+<LI><A NAME="News-3.22.0" HREF="manual.ru.html#News-3.22.0">C.4.36  Изменения в версии 3.22.0</A>
+</UL>
+<LI><A NAME="News-3.21.x" HREF="manual.ru.html#News-3.21.x">C.5  Изменения в версии 3.21.x</A>
+<UL>
+<LI><A NAME="News-3.21.33" HREF="manual.ru.html#News-3.21.33">C.5.1  Изменения в версии 3.21.33</A>
+<LI><A NAME="News-3.21.32" HREF="manual.ru.html#News-3.21.32">C.5.2  Изменения в версии 3.21.32</A>
+<LI><A NAME="News-3.21.31" HREF="manual.ru.html#News-3.21.31">C.5.3  Изменения в версии 3.21.31</A>
+<LI><A NAME="News-3.21.30" HREF="manual.ru.html#News-3.21.30">C.5.4  Изменения в версии 3.21.30</A>
+<LI><A NAME="News-3.21.29" HREF="manual.ru.html#News-3.21.29">C.5.5  Изменения в версии 3.21.29</A>
+<LI><A NAME="News-3.21.28" HREF="manual.ru.html#News-3.21.28">C.5.6  Изменения в версии 3.21.28</A>
+<LI><A NAME="News-3.21.27" HREF="manual.ru.html#News-3.21.27">C.5.7  Изменения в версии 3.21.27</A>
+<LI><A NAME="News-3.21.26" HREF="manual.ru.html#News-3.21.26">C.5.8  Изменения в версии 3.21.26</A>
+<LI><A NAME="News-3.21.25" HREF="manual.ru.html#News-3.21.25">C.5.9  Изменения в версии 3.21.25</A>
+<LI><A NAME="News-3.21.24" HREF="manual.ru.html#News-3.21.24">C.5.10  Изменения в версии 3.21.24</A>
+<LI><A NAME="News-3.21.23" HREF="manual.ru.html#News-3.21.23">C.5.11  Изменения в версии 3.21.23</A>
+<LI><A NAME="News-3.21.22" HREF="manual.ru.html#News-3.21.22">C.5.12  Изменения в версии 3.21.22</A>
+<LI><A NAME="News-3.21.21a" HREF="manual.ru.html#News-3.21.21a">C.5.13  Изменения в версии 3.21.21a</A>
+<LI><A NAME="News-3.21.21" HREF="manual.ru.html#News-3.21.21">C.5.14  Изменения в версии 3.21.21</A>
+<LI><A NAME="News-3.21.20" HREF="manual.ru.html#News-3.21.20">C.5.15  Изменения в версии 3.21.20</A>
+<LI><A NAME="News-3.21.19" HREF="manual.ru.html#News-3.21.19">C.5.16  Изменения в версии 3.21.19</A>
+<LI><A NAME="News-3.21.18" HREF="manual.ru.html#News-3.21.18">C.5.17  Изменения в версии 3.21.18</A>
+<LI><A NAME="News-3.21.17" HREF="manual.ru.html#News-3.21.17">C.5.18  Изменения в версии 3.21.17</A>
+<LI><A NAME="News-3.21.16" HREF="manual.ru.html#News-3.21.16">C.5.19  Изменения в версии 3.21.16</A>
+<LI><A NAME="News-3.21.15" HREF="manual.ru.html#News-3.21.15">C.5.20  Изменения в версии 3.21.15</A>
+<LI><A NAME="News-3.21.14b" HREF="manual.ru.html#News-3.21.14b">C.5.21  Изменения в версии 3.21.14b</A>
+<LI><A NAME="News-3.21.14a" HREF="manual.ru.html#News-3.21.14a">C.5.22  Изменения в версии 3.21.14a</A>
+<LI><A NAME="News-3.21.13" HREF="manual.ru.html#News-3.21.13">C.5.23  Изменения в версии 3.21.13</A>
+<LI><A NAME="News-3.21.12" HREF="manual.ru.html#News-3.21.12">C.5.24  Изменения в версии 3.21.12</A>
+<LI><A NAME="News-3.21.11" HREF="manual.ru.html#News-3.21.11">C.5.25  Изменения в версии 3.21.11</A>
+<LI><A NAME="News-3.21.10" HREF="manual.ru.html#News-3.21.10">C.5.26  Изменения в версии 3.21.10</A>
+<LI><A NAME="News-3.21.9" HREF="manual.ru.html#News-3.21.9">C.5.27  Изменения в версии 3.21.9</A>
+<LI><A NAME="News-3.21.8" HREF="manual.ru.html#News-3.21.8">C.5.28  Изменения в версии 3.21.8</A>
+<LI><A NAME="News-3.21.7" HREF="manual.ru.html#News-3.21.7">C.5.29  Изменения в версии 3.21.7</A>
+<LI><A NAME="News-3.21.6" HREF="manual.ru.html#News-3.21.6">C.5.30  Изменения в версии 3.21.6</A>
+<LI><A NAME="News-3.21.5" HREF="manual.ru.html#News-3.21.5">C.5.31  Изменения в версии 3.21.5</A>
+<LI><A NAME="News-3.21.4" HREF="manual.ru.html#News-3.21.4">C.5.32  Изменения в версии 3.21.4</A>
+<LI><A NAME="News-3.21.3" HREF="manual.ru.html#News-3.21.3">C.5.33  Изменения в версии 3.21.3</A>
+<LI><A NAME="News-3.21.2" HREF="manual.ru.html#News-3.21.2">C.5.34  Изменения в версии 3.21.2</A>
+<LI><A NAME="News-3.21.0" HREF="manual.ru.html#News-3.21.0">C.5.35  Изменения в версии 3.21.0</A>
+</UL>
+<LI><A NAME="News-3.20.x" HREF="manual.ru.html#News-3.20.x">C.6  Изменения в версии 3.20.x</A>
+<UL>
+<LI><A NAME="News-3.20.18" HREF="manual.ru.html#News-3.20.18">C.6.1  Изменения в версии 3.20.18</A>
+<LI><A NAME="News-3.20.17" HREF="manual.ru.html#News-3.20.17">C.6.2  Изменения в версии 3.20.17</A>
+<LI><A NAME="News-3.20.16" HREF="manual.ru.html#News-3.20.16">C.6.3  Изменения в версии 3.20.16</A>
+<LI><A NAME="News-3.20.15" HREF="manual.ru.html#News-3.20.15">C.6.4  Изменения в версии 3.20.15</A>
+<LI><A NAME="News-3.20.14" HREF="manual.ru.html#News-3.20.14">C.6.5  Изменения в версии 3.20.14</A>
+<LI><A NAME="News-3.20.13" HREF="manual.ru.html#News-3.20.13">C.6.6  Изменения в версии 3.20.13</A>
+<LI><A NAME="News-3.20.11" HREF="manual.ru.html#News-3.20.11">C.6.7  Изменения в версии 3.20.11</A>
+<LI><A NAME="News-3.20.10" HREF="manual.ru.html#News-3.20.10">C.6.8  Изменения в версии 3.20.10</A>
+<LI><A NAME="News-3.20.9" HREF="manual.ru.html#News-3.20.9">C.6.9  Изменения в версии 3.20.9</A>
+<LI><A NAME="News-3.20.8" HREF="manual.ru.html#News-3.20.8">C.6.10  Изменения в версии 3.20.8</A>
+<LI><A NAME="News-3.20.7" HREF="manual.ru.html#News-3.20.7">C.6.11  Изменения в версии 3.20.7</A>
+<LI><A NAME="News-3.20.6" HREF="manual.ru.html#News-3.20.6">C.6.12  Изменения в версии 3.20.6</A>
+<LI><A NAME="News-3.20.3" HREF="manual.ru.html#News-3.20.3">C.6.13  Изменения в версии 3.20.3</A>
+<LI><A NAME="News-3.20.0" HREF="manual.ru.html#News-3.20.0">C.6.14  Изменения в версии 3.20.0</A>
+</UL>
+<LI><A NAME="News-3.19.x" HREF="manual.ru.html#News-3.19.x">C.7  Изменения в версии 3.19.x</A>
+<UL>
+<LI><A NAME="News-3.19.5" HREF="manual.ru.html#News-3.19.5">C.7.1  Изменения в версии 3.19.5</A>
+<LI><A NAME="News-3.19.4" HREF="manual.ru.html#News-3.19.4">C.7.2  Изменения в версии 3.19.4</A>
+<LI><A NAME="News-3.19.3" HREF="manual.ru.html#News-3.19.3">C.7.3  Изменения в версии 3.19.3</A>
+</UL>
+</UL>
+<LI><A NAME="Porting" HREF="manual.ru.html#Porting">D  Перенос на другие системы</A>
+<UL>
+<LI><A NAME="Debugging_server" HREF="manual.ru.html#Debugging_server">D.1  Отладка сервера MySQL</A>
+<UL>
+<LI><A NAME="Compiling_for_debugging" HREF="manual.ru.html#Compiling_for_debugging">D.1.1  Компиляция MySQL для отладки</A>
+<LI><A NAME="Making_trace_files" HREF="manual.ru.html#Making_trace_files">D.1.2  Создание трассировочных файлов</A>
+<LI><A NAME="Using_gdb_on_mysqld" HREF="manual.ru.html#Using_gdb_on_mysqld">D.1.3  Отладка mysqld при помощи gdb</A>
+<LI><A NAME="Using_stack_trace" HREF="manual.ru.html#Using_stack_trace">D.1.4  Использование трассировки стека</A>
+<LI><A NAME="Using_log_files" HREF="manual.ru.html#Using_log_files">D.1.5  Использование журналов для определения причин ошибок в mysqld</A>
+<LI><A NAME="Reproduceable_test_case" HREF="manual.ru.html#Reproduceable_test_case">D.1.6  Создание контрольного примера при повреждении таблиц</A>
+</UL>
+<LI><A NAME="Debugging_client" HREF="manual.ru.html#Debugging_client">D.2  Отладка клиента MySQL</A>
+<LI><A NAME="The_DBUG_package" HREF="manual.ru.html#The_DBUG_package">D.3  Пакет DBUG</A>
+<LI><A NAME="Locking_methods" HREF="manual.ru.html#Locking_methods">D.4  Методы блокировки</A>
+<LI><A NAME="RTS-threads" HREF="manual.ru.html#RTS-threads">D.5  Замечания по потокам RTS</A>
+<LI><A NAME="Thread_packages" HREF="manual.ru.html#Thread_packages">D.6  Различия между разными потоковыми пакетами</A>
+</UL>
+<LI><A NAME="Environment_variables" HREF="manual.ru.html#Environment_variables">E  Переменные окружения</A>
+<LI><A NAME="Regexp" HREF="manual.ru.html#Regexp">F  Регулярные выражения в MySQL</A>
+<LI><A NAME="GPL_license" HREF="manual.ru.html#GPL_license">G  GNU General Public License</A>
+<UL>
+<LI><A NAME="SEC835" HREF="manual.ru.html#SEC835">9.4  Preamble</A>
+</UL>
+<LI><A NAME="LGPL_license" HREF="manual.ru.html#LGPL_license">H  GNU Lesser General Public License</A>
+<LI><A NAME="Function_Index" HREF="manual.ru.html#Function_Index">Команды SQL, функциональное оглавление</A>
+<LI><A NAME="Concept_Index" HREF="manual.ru.html#Concept_Index">Концептуальное оглавление</A>
+</UL>
+ </BODY>
+ </HTML>
